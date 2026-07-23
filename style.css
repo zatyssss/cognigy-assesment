@@ -34,8 +34,11 @@ h1,h2,h3,p{margin:0;}
 }
 .brand{display:flex;align-items:center;gap:10px;}
 .brand-mark{
-  width:12px;height:12px;border-radius:3px;background:var(--indigo);
- flex-shrink:0;
+    width:12px;
+    height:12px;
+    border-radius:3px;
+    background:var(--indigo);
+    flex-shrink:0;
 }
 .brand-name{font-weight:700;font-size:15px;letter-spacing:.2px;}
 .timer-badge{
