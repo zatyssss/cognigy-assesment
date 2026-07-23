@@ -1,1 +1,3590 @@
-
+[
+  {
+    "id": 1,
+    "question": "Before creating an AI Agent in Cognigy, which prerequisite component must be configured?",
+    "options": [
+      "Voice Gateway",
+      "Analytics Dashboard",
+      "Large Language Model (LLM)",
+      "OData Endpoint"
+    ],
+    "answer": 2,
+    "explanation": "AI Agents require an LLM to be configured before they can be created."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary purpose of the AI Agent Wizard?",
+    "options": [
+      "Generate API documentation",
+      "Build dashboards",
+      "Create the underlying prompt configuration for the AI Agent",
+      "Configure OData reporting"
+    ],
+    "answer": 2,
+    "explanation": "The wizard simplifies AI Agent creation by generating prompt instructions behind the scenes."
+  },
+  {
+    "id": 3,
+    "question": "Which statement best describes Grounding Knowledge?",
+    "options": [
+      "It allows the AI to browse the internet.",
+      "It provides trusted company-specific information for AI responses.",
+      "It stores API credentials.",
+      "It translates customer conversations."
+    ],
+    "answer": 1,
+    "explanation": "Grounding Knowledge ensures responses come from trusted enterprise information rather than the LLM's general knowledge."
+  },
+  {
+    "id": 4,
+    "question": "Why should instructions in the AI Agent Wizard and Job Description not contradict each other?",
+    "options": [
+      "They are processed independently.",
+      "Contradicting prompts may confuse the LLM and reduce response quality.",
+      "Cognigy ignores the Job Description.",
+      "They affect only analytics."
+    ],
+    "answer": 1,
+    "explanation": "Since both become part of the final prompt, conflicting instructions may produce inconsistent answers."
+  },
+  {
+    "id": 5,
+    "question": "What is the recommended mindset when designing AI Agents compared to traditional chatbots?",
+    "options": [
+      "Design every conversation as a fixed script.",
+      "Treat the AI Agent like a human employee being coached.",
+      "Build hundreds of intents first.",
+      "Disable generative AI features."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents are guided through instructions and knowledge rather than rigid conversation trees."
+  },
+  {
+    "id": 6,
+    "question": "A customer asks a question that exists in your uploaded company documentation. Which Cognigy feature should answer it?",
+    "options": [
+      "Voice Gateway",
+      "Knowledge AI",
+      "OData",
+      "Session Config"
+    ],
+    "answer": 1,
+    "explanation": "Knowledge AI retrieves relevant information from uploaded documents."
+  },
+  {
+    "id": 7,
+    "question": "What happens if Grounding Knowledge is not properly enabled for an AI Agent?",
+    "options": [
+      "The AI cannot start.",
+      "The AI may rely on its pretrained knowledge instead of company information.",
+      "APIs stop functioning.",
+      "Voice conversations are disabled."
+    ],
+    "answer": 1,
+    "explanation": "Without proper grounding, the LLM may generate answers based on public knowledge rather than enterprise content."
+  },
+  {
+    "id": 8,
+    "question": "Which configuration allows an AI Agent to answer questions using uploaded company documents?",
+    "options": [
+      "Analytics",
+      "Knowledge Store",
+      "OData Feed",
+      "Session Config"
+    ],
+    "answer": 1,
+    "explanation": "A Knowledge Store contains indexed documents that the AI Agent can reference."
+  },
+  {
+    "id": 9,
+    "question": "Which speaking style configuration mainly affects the AI Agent?",
+    "options": [
+      "API authentication",
+      "Reporting metrics",
+      "Tone and response style",
+      "Session timeout"
+    ],
+    "answer": 2,
+    "explanation": "Speaking Style controls how formal, concise, or comprehensive the AI Agent sounds."
+  },
+  {
+    "id": 10,
+    "question": "Why is duplicate information between the AI Agent Wizard and Job Description generally discouraged?",
+    "options": [
+      "It increases licensing costs.",
+      "It creates unnecessary prompt repetition and maintenance effort.",
+      "It disables Knowledge AI.",
+      "It prevents analytics from working."
+    ],
+    "answer": 1,
+    "explanation": "Prompt duplication provides little benefit and makes future maintenance more difficult."
+  },
+  {
+    "id": 11,
+    "question": "During AI Agent creation, what is the main purpose of the Description field?",
+    "options": [
+      "Configure API authentication",
+      "Define the AI Agent's purpose and responsibilities",
+      "Enable multilingual support",
+      "Create conversation analytics"
+    ],
+    "answer": 1,
+    "explanation": "The Description helps define the AI Agent's intended role and provides context that contributes to the prompt used by the LLM."
+  },
+  {
+    "id": 12,
+    "question": "Which setting determines whether customer profile information is included in prompts sent to the LLM?",
+    "options": [
+      "Voice Gateway",
+      "Data Privacy and Security",
+      "Session Config",
+      "Analytics"
+    ],
+    "answer": 1,
+    "explanation": "The Data Privacy and Security configuration controls which profile information is shared with the LLM during conversations."
+  },
+  {
+    "id": 13,
+    "question": "What is the recommended Safety Instructions setting for most AI Agent deployments?",
+    "options": [
+      "Disabled",
+      "Standard",
+      "Custom Only",
+      "Advanced"
+    ],
+    "answer": 1,
+    "explanation": "Standard Safety Instructions provide built-in safeguards and are recommended for most implementations."
+  },
+  {
+    "id": 14,
+    "question": "Which statement best describes a Knowledge Store?",
+    "options": [
+      "A repository for conversation transcripts",
+      "A collection of indexed business documents used for AI grounding",
+      "A database for API credentials",
+      "A storage location for analytics reports"
+    ],
+    "answer": 1,
+    "explanation": "Knowledge Stores contain indexed documents that Knowledge AI retrieves to generate accurate, organization-specific responses."
+  },
+  {
+    "id": 15,
+    "question": "What is the primary advantage of using company documentation as grounding knowledge?",
+    "options": [
+      "Faster API responses",
+      "More accurate and consistent responses based on trusted information",
+      "Reduced network traffic",
+      "Improved voice quality"
+    ],
+    "answer": 1,
+    "explanation": "Grounding knowledge minimizes hallucinations by providing authoritative business information."
+  },
+  {
+    "id": 16,
+    "question": "A customer asks about a newly released company product that is not widely available on the internet. What should the AI Agent rely on?",
+    "options": [
+      "Public search engines",
+      "Pretrained LLM knowledge only",
+      "Company's Knowledge Store",
+      "Analytics dashboard"
+    ],
+    "answer": 2,
+    "explanation": "Internal product information should come from the organization's Knowledge Store to ensure accuracy."
+  },
+  {
+    "id": 17,
+    "question": "Why is it beneficial to configure Knowledge Stores before building an AI Agent?",
+    "options": [
+      "It automatically creates APIs.",
+      "It provides trusted information that can immediately be used for grounding.",
+      "It replaces the need for an LLM.",
+      "It generates analytics reports."
+    ],
+    "answer": 1,
+    "explanation": "Preparing the Knowledge Store beforehand enables the AI Agent to reference verified company information during conversations."
+  },
+  {
+    "id": 18,
+    "question": "Which of the following best describes the Speaking Style settings?",
+    "options": [
+      "They directly modify the LLM model.",
+      "They provide general guidance on how the AI Agent should communicate.",
+      "They determine API timeout values.",
+      "They configure voice recording quality."
+    ],
+    "answer": 1,
+    "explanation": "Speaking Style influences characteristics such as formality and level of detail without changing the underlying LLM."
+  },
+  {
+    "id": 19,
+    "question": "What is the main purpose of the \"Only introduce yourself at the beginning of the conversation\" instruction?",
+    "options": [
+      "Improve analytics reporting",
+      "Reduce repetitive introductions during conversations",
+      "Enable multilingual conversations",
+      "Increase API performance"
+    ],
+    "answer": 1,
+    "explanation": "This instruction helps create a more natural customer experience by preventing unnecessary repeated introductions."
+  },
+  {
+    "id": 20,
+    "question": "Which design principle should be followed when configuring AI Agent prompts?",
+    "options": [
+      "Repeat every instruction multiple times.",
+      "Keep instructions internally consistent and avoid conflicting guidance.",
+      "Add as many instructions as possible.",
+      "Disable grounding knowledge to improve creativity."
+    ],
+    "answer": 1,
+    "explanation": "Clear, concise, and consistent prompts produce more reliable AI Agent behavior and reduce ambiguity."
+  },
+  {
+    "id": 21,
+    "question": "An AI Agent is providing inaccurate answers even though the correct information exists in the Knowledge Store. What should you check first?",
+    "options": [
+      "Analytics Dashboard",
+      "Whether Grounding Knowledge is properly configured and enabled",
+      "Voice Gateway configuration",
+      "Session timeout settings"
+    ],
+    "answer": 1,
+    "explanation": "If Grounding Knowledge is not configured correctly, the AI Agent may rely on the LLM's general knowledge instead of the company's indexed documents."
+  },
+  {
+    "id": 22,
+    "question": "Why are documents divided into \"chunks\" when uploaded into a Knowledge Store?",
+    "options": [
+      "To reduce storage costs",
+      "To allow Knowledge AI to retrieve the most relevant sections efficiently",
+      "To improve speech recognition",
+      "To generate analytics reports"
+    ],
+    "answer": 1,
+    "explanation": "Chunking allows Knowledge AI to retrieve only the most relevant sections of a document instead of processing the entire file."
+  },
+  {
+    "id": 23,
+    "question": "Which statement best describes the role of metadata in a Knowledge Store?",
+    "options": [
+      "It replaces document content.",
+      "It helps organize, filter, and retrieve relevant knowledge.",
+      "It encrypts uploaded documents.",
+      "It stores conversation history."
+    ],
+    "answer": 1,
+    "explanation": "Metadata provides additional context that improves document filtering and retrieval accuracy."
+  },
+  {
+    "id": 24,
+    "question": "Why should uploaded knowledge documents be reviewed and updated regularly?",
+    "options": [
+      "To improve API response time.",
+      "To ensure the AI Agent provides accurate and current business information.",
+      "To reduce conversation length.",
+      "To enable multilingual conversations."
+    ],
+    "answer": 1,
+    "explanation": "Outdated documents can lead to outdated responses, reducing customer trust and service quality."
+  },
+  {
+    "id": 25,
+    "question": "A company has separate Knowledge Stores for HR, IT Support, and Sales. What is the main benefit of this approach?",
+    "options": [
+      "It increases LLM token usage.",
+      "It allows AI Agents to retrieve more focused and relevant information.",
+      "It disables document chunking.",
+      "It replaces API integrations."
+    ],
+    "answer": 1,
+    "explanation": "Separating knowledge by business domain improves retrieval relevance and reduces unnecessary search results."
+  },
+  {
+    "id": 26,
+    "question": "What is the primary purpose of an AI Agent's Job Description?",
+    "options": [
+      "Configure analytics",
+      "Describe the responsibilities, objectives, and expected behavior of the AI Agent",
+      "Store customer profiles",
+      "Define API endpoints"
+    ],
+    "answer": 1,
+    "explanation": "The Job Description tells the LLM what role it should perform and how it should behave during conversations."
+  },
+  {
+    "id": 27,
+    "question": "Why should an AI Agent's Job Description avoid unnecessary details?",
+    "options": [
+      "Long descriptions increase API costs.",
+      "Clear and focused instructions improve the consistency of AI responses.",
+      "It reduces storage requirements.",
+      "It improves voice quality."
+    ],
+    "answer": 1,
+    "explanation": "Concise instructions reduce ambiguity and help the LLM consistently follow the intended behavior."
+  },
+  {
+    "id": 28,
+    "question": "When designing an AI Agent, which approach is considered a best practice?",
+    "options": [
+      "Assume the AI already knows company policies.",
+      "Explicitly provide business knowledge and operational instructions.",
+      "Disable Knowledge AI.",
+      "Depend entirely on internet-based information."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents should rely on verified business knowledge rather than assumptions or public information."
+  },
+  {
+    "id": 29,
+    "question": "Which of the following is an example of a well-defined AI Agent responsibility?",
+    "options": [
+      "\"Know everything.\"",
+      "\"Assist customers with product information, order status, and appointment scheduling.\"",
+      "\"Answer however you like.\"",
+      "\"Only respond with one-word answers.\""
+    ],
+    "answer": 1,
+    "explanation": "Effective Job Descriptions clearly define the AI Agent's scope and expected responsibilities."
+  },
+  {
+    "id": 30,
+    "question": "Which principle should be followed when designing prompts for enterprise AI Agents?",
+    "options": [
+      "Keep prompts vague to encourage creativity.",
+      "Provide clear objectives, trusted knowledge, and consistent instructions.",
+      "Avoid defining responsibilities.",
+      "Allow conflicting instructions for flexibility."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI performs best when objectives, business knowledge, and behavioral expectations are clearly defined."
+  },
+  {
+    "id": 31,
+    "question": "An AI Agent needs to book appointments through an external scheduling system. Which Cognigy capability enables this integration?",
+    "options": [
+      "Knowledge Store",
+      "HTTP Request Node (Tool/API Integration)",
+      "Analytics Dashboard",
+      "Voice Gateway"
+    ],
+    "answer": 1,
+    "explanation": "The HTTP Request Node allows the AI Agent to call external REST APIs, enabling actions such as appointment booking, order tracking, and CRM updates."
+  },
+  {
+    "id": 32,
+    "question": "Why should customer identity be verified before calling a backend API?",
+    "options": [
+      "To improve speech recognition.",
+      "To prevent unauthorized access to sensitive customer information.",
+      "To reduce API response time.",
+      "To improve analytics reporting."
+    ],
+    "answer": 1,
+    "explanation": "Identity verification is an important security practice before retrieving or modifying customer data."
+  },
+  {
+    "id": 33,
+    "question": "What is the primary benefit of giving an AI Agent access to external tools or APIs?",
+    "options": [
+      "It reduces the size of the Knowledge Store.",
+      "It allows the AI Agent to perform real-time business actions.",
+      "It improves internet connectivity.",
+      "It replaces the need for LLMs."
+    ],
+    "answer": 1,
+    "explanation": "APIs enable AI Agents to perform real-world tasks such as checking balances, creating tickets, or updating customer records."
+  },
+  {
+    "id": 34,
+    "question": "An external API returns a large JSON response containing hundreds of fields. What is the recommended best practice?",
+    "options": [
+      "Display the entire JSON to the customer.",
+      "Extract and present only the required information.",
+      "Save the JSON into the transcript.",
+      "Convert the JSON into speech."
+    ],
+    "answer": 1,
+    "explanation": "Customers should only receive relevant information, improving readability and reducing unnecessary processing."
+  },
+  {
+    "id": 35,
+    "question": "Which HTTP method is commonly used to retrieve information from a REST API without modifying data?",
+    "options": [
+      "DELETE",
+      "POST",
+      "GET",
+      "PATCH"
+    ],
+    "answer": 2,
+    "explanation": "The GET method retrieves information from an API without changing the underlying data."
+  },
+  {
+    "id": 36,
+    "question": "Which HTTP method is typically used to create a new customer support ticket through an API?",
+    "options": [
+      "GET",
+      "POST",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "answer": 1,
+    "explanation": "POST is commonly used to create new resources such as support tickets, appointments, or customer records."
+  },
+  {
+    "id": 37,
+    "question": "Which authentication method is commonly used to securely access enterprise REST APIs?",
+    "options": [
+      "Anonymous Access",
+      "OAuth 2.0",
+      "FTP Login",
+      "CSV Upload"
+    ],
+    "answer": 1,
+    "explanation": "OAuth 2.0 is the industry standard for secure API authentication and authorization."
+  },
+  {
+    "id": 38,
+    "question": "When an API request fails, what is the best user experience practice?",
+    "options": [
+      "Display the raw API error message.",
+      "Ignore the error.",
+      "Inform the customer politely and provide an alternative or retry option.",
+      "End the conversation immediately."
+    ],
+    "answer": 2,
+    "explanation": "Enterprise AI Agents should handle failures gracefully while maintaining a positive customer experience."
+  },
+  {
+    "id": 39,
+    "question": "What is the main advantage of integrating AI Agents with CRM systems?",
+    "options": [
+      "Faster voice synthesis.",
+      "Personalized responses using customer-specific information.",
+      "Reduced document chunking.",
+      "Improved browser compatibility."
+    ],
+    "answer": 1,
+    "explanation": "CRM integration allows AI Agents to personalize conversations based on customer history and profile information."
+  },
+  {
+    "id": 40,
+    "question": "A customer asks for the latest order status. Which sequence represents the best practice?",
+    "options": [
+      "Guess the order status based on previous conversations.",
+      "Retrieve the latest information from the backend system before responding.",
+      "Answer using internet search results.",
+      "Ask the customer to contact support instead."
+    ],
+    "answer": 1,
+    "explanation": "Real-time customer information should always come from the organization's backend systems rather than assumptions or historical data."
+  },
+  {
+    "id": 41,
+    "question": "Which Cognigy object is primarily used to store information that should persist throughout a single conversation?",
+    "options": [
+      "Input",
+      "Context",
+      "Transcript",
+      "Profile"
+    ],
+    "answer": 1,
+    "explanation": "The Context object stores variables that remain available throughout the current conversation session."
+  },
+  {
+    "id": 42,
+    "question": "Which object contains the customer's current message during a conversation?",
+    "options": [
+      "Profile",
+      "Context",
+      "Input",
+      "Output"
+    ],
+    "answer": 2,
+    "explanation": "The Input object contains information related to the customer's current interaction, including the latest message."
+  },
+  {
+    "id": 43,
+    "question": "What is the primary purpose of the Profile object?",
+    "options": [
+      "Store temporary variables for one conversation",
+      "Store user information across multiple conversations",
+      "Store API responses only",
+      "Store analytics reports"
+    ],
+    "answer": 1,
+    "explanation": "The Profile object provides long-term storage that persists across different conversations with the same user."
+  },
+  {
+    "id": 44,
+    "question": "Which Cognigy object is best suited for storing a customer's loyalty membership number so it is remembered in future conversations?",
+    "options": [
+      "Input",
+      "Transcript",
+      "Profile",
+      "Output"
+    ],
+    "answer": 2,
+    "explanation": "Persistent customer information should be stored in the Profile object."
+  },
+  {
+    "id": 45,
+    "question": "A customer provides their booking reference at the beginning of a conversation. Which object should store this value so it can be reused later in the same session?",
+    "options": [
+      "Input",
+      "Context",
+      "Profile",
+      "Analytics"
+    ],
+    "answer": 1,
+    "explanation": "Information needed only during the current conversation should be stored in Context."
+  },
+  {
+    "id": 46,
+    "question": "Why should developers avoid storing unnecessary sensitive information in Context or Profile objects?",
+    "options": [
+      "It slows down Voice Gateway.",
+      "It increases Knowledge Store size.",
+      "It may create unnecessary privacy and security risks.",
+      "It disables API integration."
+    ],
+    "answer": 2,
+    "explanation": "Developers should follow data minimization principles and only retain information that is required for business purposes."
+  },
+  {
+    "id": 47,
+    "question": "Which Cognigy object is automatically populated with the AI Agent's response before it is delivered to the customer?",
+    "options": [
+      "Output",
+      "Profile",
+      "Context",
+      "Input"
+    ],
+    "answer": 0,
+    "explanation": "The Output object contains the messages generated by the AI Agent before they are sent to the customer."
+  },
+  {
+    "id": 48,
+    "question": "During a conversation, where can developers typically find the detected intent and extracted entities?",
+    "options": [
+      "Analytics Dashboard",
+      "Input Object",
+      "Knowledge Store",
+      "Session Config"
+    ],
+    "answer": 1,
+    "explanation": "The Input object contains NLU results such as detected intents, entities, and slots for the current user message."
+  },
+  {
+    "id": 49,
+    "question": "Which statement correctly describes the relationship between Context and Profile?",
+    "options": [
+      "Both are deleted immediately after every user message.",
+      "Context persists for the current conversation, while Profile persists across multiple conversations.",
+      "Profile only stores analytics data.",
+      "Context can only store API credentials."
+    ],
+    "answer": 1,
+    "explanation": "Context provides session memory, while Profile provides long-term user memory."
+  },
+  {
+    "id": 50,
+    "question": "A returning customer expects the AI Agent to remember their preferred language from a previous conversation. Which Cognigy object should store this preference?",
+    "options": [
+      "Input",
+      "Output",
+      "Context",
+      "Profile"
+    ],
+    "answer": 3,
+    "explanation": "Customer preferences that should remain available across future conversations belong in the Profile object."
+  },
+  {
+    "id": 51,
+    "question": "What is the primary purpose of the HTTP Request Node in Cognigy?",
+    "options": [
+      "Detect customer intent",
+      "Connect to external systems through REST APIs",
+      "Store Knowledge AI documents",
+      "Generate analytics reports"
+    ],
+    "answer": 1,
+    "explanation": "The HTTP Request Node enables Cognigy to communicate with external applications and services using REST APIs."
+  },
+  {
+    "id": 52,
+    "question": "Which information is typically required when configuring an HTTP Request Node?",
+    "options": [
+      "API endpoint URL",
+      "HTTP method (GET, POST, etc.)",
+      "Authentication credentials (if required)",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "A successful API call usually requires the endpoint URL, HTTP method, headers/authentication, and sometimes request parameters or a request body."
+  },
+  {
+    "id": 53,
+    "question": "Why should API authentication credentials never be hardcoded directly into a flow?",
+    "options": [
+      "It slows down API responses.",
+      "It increases transcript size.",
+      "It creates security risks and makes maintenance more difficult.",
+      "Cognigy does not support authentication."
+    ],
+    "answer": 2,
+    "explanation": "Sensitive credentials should be stored securely using Secrets or environment configurations rather than being exposed in flows."
+  },
+  {
+    "id": 54,
+    "question": "After receiving an API response, what should the AI Agent do before presenting information to the customer?",
+    "options": [
+      "Display the raw response immediately.",
+      "Validate and extract only the relevant business information.",
+      "Restart the conversation.",
+      "Save everything into Analytics."
+    ],
+    "answer": 1,
+    "explanation": "Only meaningful information should be presented to customers, while unnecessary technical details should be filtered out."
+  },
+  {
+    "id": 55,
+    "question": "Which HTTP status code generally indicates that an API request completed successfully?",
+    "options": [
+      "200 OK",
+      "404 Not Found",
+      "500 Internal Server Error",
+      "401 Unauthorized"
+    ],
+    "answer": 0,
+    "explanation": "HTTP Status Code 200 OK indicates that the server successfully processed the request."
+  },
+  {
+    "id": 56,
+    "question": "An API returns a 401 Unauthorized error. What is the most likely cause?",
+    "options": [
+      "The server is offline.",
+      "The API endpoint no longer exists.",
+      "Authentication credentials are missing or invalid.",
+      "The JSON response is too large."
+    ],
+    "answer": 2,
+    "explanation": "A 401 error typically indicates missing, expired, or incorrect authentication credentials."
+  },
+  {
+    "id": 57,
+    "question": "Why should timeout handling be configured when integrating external APIs?",
+    "options": [
+      "To improve voice quality.",
+      "To prevent customers from waiting indefinitely if an external service becomes unavailable.",
+      "To increase Knowledge AI accuracy.",
+      "To improve document indexing."
+    ],
+    "answer": 1,
+    "explanation": "Timeouts help ensure that conversations remain responsive even when external systems experience delays."
+  },
+  {
+    "id": 58,
+    "question": "If an external API is temporarily unavailable, what should the AI Agent do?",
+    "options": [
+      "Continue providing fabricated information.",
+      "Inform the customer that the service is temporarily unavailable and suggest retrying later or transferring to an agent.",
+      "End the session immediately.",
+      "Ignore the error and continue normally."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should never invent information when backend services fail. Graceful error handling improves customer trust."
+  },
+  {
+    "id": 59,
+    "question": "Which best practice improves maintainability when multiple flows call the same API?",
+    "options": [
+      "Duplicate the API configuration in every flow.",
+      "Use reusable API components or centralized configurations.",
+      "Hardcode values separately in each flow.",
+      "Disable authentication."
+    ],
+    "answer": 1,
+    "explanation": "Reusable configurations reduce maintenance effort and improve consistency across projects."
+  },
+  {
+    "id": 60,
+    "question": "Why is logging API errors useful during development and production?",
+    "options": [
+      "It increases LLM performance.",
+      "It helps identify integration issues, troubleshoot failures, and improve system reliability.",
+      "It speeds up customer conversations.",
+      "It improves document chunking."
+    ],
+    "answer": 1,
+    "explanation": "Proper logging enables developers to quickly identify failures, monitor integrations, and resolve issues efficiently."
+  },
+  {
+    "id": 61,
+    "question": "What is the primary purpose of Cognigy's Message Lifecycle?",
+    "options": [
+      "To monitor server performance",
+      "To describe how a user message is received, processed, and returned as a response",
+      "To generate analytics dashboards",
+      "To manage user authentication"
+    ],
+    "answer": 1,
+    "explanation": "The Message Lifecycle explains the complete journey of a customer message—from the client, through the endpoint and flow, to the AI response returned to the client."
+  },
+  {
+    "id": 62,
+    "question": "Which component receives messages from external channels such as WebChat or REST API before forwarding them to a Cognigy Flow?",
+    "options": [
+      "Knowledge Store",
+      "Endpoint",
+      "Analytics",
+      "Profile"
+    ],
+    "answer": 1,
+    "explanation": "Endpoints receive incoming messages from communication channels and route them into the Cognigy Flow for processing."
+  },
+  {
+    "id": 63,
+    "question": "Which communication protocol is commonly used by Cognigy REST Endpoints?",
+    "options": [
+      "SMTP",
+      "FTP",
+      "HTTP/HTTPS",
+      "SNMP"
+    ],
+    "answer": 2,
+    "explanation": "REST Endpoints communicate over HTTP or HTTPS using standard REST principles."
+  },
+  {
+    "id": 64,
+    "question": "Which information is typically included when sending a message to a Cognigy REST Endpoint?",
+    "options": [
+      "User ID",
+      "Session ID",
+      "Message Text",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "REST requests typically contain a User ID, Session ID, message text, and optional data payload."
+  },
+  {
+    "id": 65,
+    "question": "What is the purpose of a Session ID?",
+    "options": [
+      "Authenticate API users",
+      "Identify and maintain the current conversation session",
+      "Encrypt customer information",
+      "Store Knowledge AI documents"
+    ],
+    "answer": 1,
+    "explanation": "The Session ID enables Cognigy to associate multiple user messages with the same conversation."
+  },
+  {
+    "id": 66,
+    "question": "What is the primary advantage of using WebSocket communication compared to standard REST calls?",
+    "options": [
+      "It permanently stores conversations.",
+      "It supports real-time, bidirectional communication between client and server.",
+      "It replaces Knowledge AI.",
+      "It eliminates the need for APIs."
+    ],
+    "answer": 1,
+    "explanation": "WebSockets maintain a persistent connection, allowing messages to flow instantly in both directions."
+  },
+  {
+    "id": 67,
+    "question": "Which Cognigy feature allows developers to connect custom chat clients that use different message formats?",
+    "options": [
+      "Knowledge AI",
+      "Endpoint Transformers",
+      "Voice Gateway",
+      "Session Config"
+    ],
+    "answer": 1,
+    "explanation": "Endpoint Transformers convert incoming and outgoing messages between custom client formats and Cognigy's expected message structure."
+  },
+  {
+    "id": 68,
+    "question": "Why are Endpoint Transformers useful when integrating third-party applications?",
+    "options": [
+      "They improve speech synthesis.",
+      "They translate custom message formats into a structure Cognigy understands.",
+      "They replace REST APIs.",
+      "They improve document chunking."
+    ],
+    "answer": 1,
+    "explanation": "Third-party applications often use different payload formats. Endpoint Transformers adapt these payloads for Cognigy."
+  },
+  {
+    "id": 69,
+    "question": "During the Message Lifecycle, where is the business logic executed?",
+    "options": [
+      "Endpoint",
+      "Knowledge Store",
+      "Cognigy Flow",
+      "Analytics Dashboard"
+    ],
+    "answer": 2,
+    "explanation": "The Flow processes user input, executes logic, calls APIs, and generates responses."
+  },
+  {
+    "id": 70,
+    "question": "After a Cognigy Flow generates a response, what happens next?",
+    "options": [
+      "The response is deleted.",
+      "The response is returned through the Endpoint back to the client application.",
+      "The response is automatically stored in the Knowledge Store.",
+      "The response is sent directly to Analytics."
+    ],
+    "answer": 1,
+    "explanation": "Once the Flow finishes processing, the Endpoint sends the response back to the originating channel, such as WebChat or a REST client."
+  },
+  {
+    "id": 71,
+    "question": "What is the primary purpose of an NLU (Natural Language Understanding) engine in Cognigy?",
+    "options": [
+      "Generate analytics reports",
+      "Understand the user's intent and extract relevant information",
+      "Store customer profiles",
+      "Manage API authentication"
+    ],
+    "answer": 1,
+    "explanation": "NLU enables Cognigy to interpret the user's message by identifying intents and extracting entities needed for conversation processing."
+  },
+  {
+    "id": 72,
+    "question": "What is an Intent in Cognigy?",
+    "options": [
+      "A database table",
+      "The user's goal or purpose behind an utterance",
+      "An API endpoint",
+      "A voice profile"
+    ],
+    "answer": 1,
+    "explanation": "An Intent represents what the customer is trying to accomplish, such as checking an order status or booking an appointment."
+  },
+  {
+    "id": 73,
+    "question": "Which Cognigy object stores the detected Intent after NLU processing?",
+    "options": [
+      "Output Object",
+      "Input Object",
+      "Profile Object",
+      "Analytics Object"
+    ],
+    "answer": 1,
+    "explanation": "After NLU processing, the detected intent and extracted entities are stored within the Input Object for the current conversation turn."
+  },
+  {
+    "id": 74,
+    "question": "What should happen if Cognigy's standard NLU cannot confidently determine the customer's intent?",
+    "options": [
+      "End the conversation immediately.",
+      "Use an NLU Transformer or fallback mechanism to further interpret the request.",
+      "Always transfer to a live agent.",
+      "Automatically restart the flow."
+    ],
+    "answer": 1,
+    "explanation": "Cognigy supports fallback approaches, including NLU Transformers, to improve intent recognition when standard NLU confidence is insufficient."
+  },
+  {
+    "id": 75,
+    "question": "What is the purpose of an NLU Transformer?",
+    "options": [
+      "Convert speech into text.",
+      "Modify or enhance NLU results before the Flow processes them.",
+      "Translate conversations into another language.",
+      "Generate Knowledge Store documents."
+    ],
+    "answer": 1,
+    "explanation": "NLU Transformers allow developers to intercept and modify NLU results before they continue through the conversation flow."
+  },
+  {
+    "id": 76,
+    "question": "In the training example, what additional technology was used inside an NLU Transformer when Cognigy NLU failed to identify an intent?",
+    "options": [
+      "Google Translate",
+      "Azure Storage",
+      "OpenAI Large Language Model (LLM)",
+      "Snowflake"
+    ],
+    "answer": 2,
+    "explanation": "The training demonstrated using an OpenAI LLM inside an NLU Transformer to infer the user's intent when traditional NLU returned no match."
+  },
+  {
+    "id": 77,
+    "question": "Why might an organization combine traditional NLU with an LLM?",
+    "options": [
+      "To reduce internet bandwidth.",
+      "To improve recognition of complex or previously unseen customer requests.",
+      "To replace all API integrations.",
+      "To eliminate Knowledge Stores."
+    ],
+    "answer": 1,
+    "explanation": "Combining traditional NLU with LLM reasoning provides more robust understanding for ambiguous or unexpected user inputs."
+  },
+  {
+    "id": 78,
+    "question": "Which statement best describes an effective Intent design?",
+    "options": [
+      "One intent should handle every possible customer request.",
+      "Each intent should represent a clear and specific business goal.",
+      "Intents should only be created after deployment.",
+      "Intents should contain API credentials."
+    ],
+    "answer": 1,
+    "explanation": "Well-defined intents improve recognition accuracy and simplify conversation design."
+  },
+  {
+    "id": 79,
+    "question": "Why is confidence scoring important in NLU?",
+    "options": [
+      "It measures API performance.",
+      "It indicates how certain the system is that it correctly identified the user's intent.",
+      "It encrypts conversation data.",
+      "It controls Voice Gateway settings."
+    ],
+    "answer": 1,
+    "explanation": "Confidence scores help determine whether the detected intent should be accepted or whether fallback logic should be executed."
+  },
+  {
+    "id": 80,
+    "question": "A customer types, \"I want to change my delivery address.\" Which is the most appropriate processing sequence?",
+    "options": [
+      "Skip NLU and immediately call an API.",
+      "Detect the intent, collect any missing information, verify the customer's identity if required, then update the address through the appropriate API.",
+      "Respond using only the Knowledge Store.",
+      "End the conversation if the intent is not exactly matched."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents should first understand the customer's intent, gather required information, perform any necessary verification, and then invoke backend systems to complete the request."
+  },
+  {
+    "id": 81,
+    "question": "What is the primary purpose of Cognigy Analytics?",
+    "options": [
+      "Create AI Agents",
+      "Monitor and analyze AI Agent performance and customer interactions",
+      "Store Knowledge AI documents",
+      "Authenticate API users"
+    ],
+    "answer": 1,
+    "explanation": "Cognigy Analytics provides insights into conversation performance, customer behavior, and AI Agent effectiveness, enabling organizations to continuously improve their virtual agents."
+  },
+  {
+    "id": 82,
+    "question": "Which metric is commonly used to measure how many conversations were handled by an AI Agent?",
+    "options": [
+      "API Latency",
+      "Conversation Volume",
+      "CPU Utilization",
+      "Token Size"
+    ],
+    "answer": 1,
+    "explanation": "Conversation Volume indicates the total number of conversations processed over a selected period."
+  },
+  {
+    "id": 83,
+    "question": "Why is monitoring conversation abandonment important?",
+    "options": [
+      "It measures internet speed.",
+      "It helps identify where customers leave conversations before resolution.",
+      "It increases Knowledge AI accuracy.",
+      "It improves API authentication."
+    ],
+    "answer": 1,
+    "explanation": "High abandonment rates may indicate poor conversation design, confusing prompts, or unresolved customer issues."
+  },
+  {
+    "id": 84,
+    "question": "Which Analytics metric helps determine whether the AI Agent successfully resolved customer issues without human intervention?",
+    "options": [
+      "Automation Rate (Containment Rate)",
+      "Memory Usage",
+      "HTTP Status Code",
+      "Session Timeout"
+    ],
+    "answer": 0,
+    "explanation": "Automation (Containment) Rate measures the percentage of conversations successfully completed without escalation to a live agent."
+  },
+  {
+    "id": 85,
+    "question": "A sudden increase in conversations transferred to live agents most likely indicates what?",
+    "options": [
+      "Better API performance.",
+      "The AI Agent may not be effectively handling customer requests.",
+      "Improved document chunking.",
+      "Increased server storage."
+    ],
+    "answer": 1,
+    "explanation": "A rising escalation rate often suggests gaps in knowledge, poor intent recognition, or missing integrations."
+  },
+  {
+    "id": 86,
+    "question": "Which Analytics feature allows developers to review the actual conversation between a customer and the AI Agent?",
+    "options": [
+      "Conversation Transcript",
+      "Knowledge Store",
+      "Session Config",
+      "Endpoint Transformer"
+    ],
+    "answer": 0,
+    "explanation": "Conversation Transcripts enable developers to analyze individual interactions for troubleshooting and optimization."
+  },
+  {
+    "id": 87,
+    "question": "What is the main benefit of reviewing conversation transcripts?",
+    "options": [
+      "Increase server memory.",
+      "Identify misunderstandings, failed intents, and opportunities for improving the AI Agent.",
+      "Reduce API authentication.",
+      "Generate new API endpoints."
+    ],
+    "answer": 1,
+    "explanation": "Transcript analysis provides valuable insights into customer behavior and areas where conversation flows can be improved."
+  },
+  {
+    "id": 88,
+    "question": "Which trend would most likely indicate that an AI Agent has improved after updates?",
+    "options": [
+      "Higher conversation abandonment.",
+      "Lower automation rate.",
+      "Increased successful resolutions and fewer escalations.",
+      "More API timeout errors."
+    ],
+    "answer": 2,
+    "explanation": "Successful improvements should increase containment while reducing transfers to human agents."
+  },
+  {
+    "id": 89,
+    "question": "Why should Analytics be reviewed regularly instead of only after deployment?",
+    "options": [
+      "Analytics automatically creates new Flows.",
+      "Customer behavior and business requirements change over time, requiring continuous optimization.",
+      "Analytics stores customer passwords.",
+      "Analytics replaces API testing."
+    ],
+    "answer": 1,
+    "explanation": "Continuous monitoring helps organizations identify trends, improve customer experience, and adapt to changing business needs."
+  },
+  {
+    "id": 90,
+    "question": "Which combination of Analytics information provides the most complete understanding of AI Agent performance?",
+    "options": [
+      "Conversation volume only.",
+      "API response times only.",
+      "Conversation volume, containment rate, escalation rate, abandonment rate, and transcript reviews.",
+      "Number of Knowledge Store documents only."
+    ],
+    "answer": 2,
+    "explanation": "Multiple performance indicators together provide a comprehensive view of operational efficiency and customer experience."
+  },
+  {
+    "id": 91,
+    "question": "Which Cognigy feature enables developers to simulate conversations before deployment?",
+    "options": [
+      "Knowledge AI",
+      "Interaction Panel",
+      "Analytics Dashboard",
+      "Voice Gateway"
+    ],
+    "answer": 1,
+    "explanation": "The Interaction Panel allows developers to test conversations, validate flow logic, and troubleshoot AI Agent behavior before publishing."
+  },
+  {
+    "id": 92,
+    "question": "Why is testing multiple conversation scenarios important before deploying an AI Agent?",
+    "options": [
+      "To reduce internet bandwidth.",
+      "To ensure the AI Agent handles both expected and unexpected user inputs correctly.",
+      "To increase Knowledge Store size.",
+      "To improve API authentication."
+    ],
+    "answer": 1,
+    "explanation": "Comprehensive testing helps identify edge cases, missing logic, and conversation failures before customers interact with the AI Agent."
+  },
+  {
+    "id": 93,
+    "question": "What is the purpose of Flow Debugging in Cognigy?",
+    "options": [
+      "Generate analytics reports.",
+      "Identify how variables, nodes, and logic are executed during a conversation.",
+      "Translate conversations.",
+      "Create Knowledge Stores."
+    ],
+    "answer": 1,
+    "explanation": "Flow debugging enables developers to trace conversation execution and verify that the Flow behaves as expected."
+  },
+  {
+    "id": 94,
+    "question": "During testing, an AI Agent repeatedly loops back to the same question. What is the most likely cause?",
+    "options": [
+      "Missing or incorrect Flow logic.",
+      "Poor internet connection.",
+      "Analytics failure.",
+      "Voice Gateway configuration."
+    ],
+    "answer": 0,
+    "explanation": "Infinite loops are typically caused by incorrect routing conditions or missing exit paths within the Flow."
+  },
+  {
+    "id": 95,
+    "question": "What should developers verify after integrating an external API into a Cognigy Flow?",
+    "options": [
+      "Only whether the API returns HTTP 200.",
+      "That the API response is correctly processed, mapped, and displayed to the customer.",
+      "Only whether authentication succeeds.",
+      "That Analytics is enabled."
+    ],
+    "answer": 1,
+    "explanation": "Successful integration includes validating business logic, response mapping, and customer-facing messages—not just successful API connectivity."
+  },
+  {
+    "id": 96,
+    "question": "Before publishing an AI Agent to production, what is considered a best practice?",
+    "options": [
+      "Publish immediately after development.",
+      "Perform functional, integration, and user acceptance testing (UAT).",
+      "Skip testing if APIs respond successfully.",
+      "Only review Analytics."
+    ],
+    "answer": 1,
+    "explanation": "Production deployments should include multiple testing phases to ensure stability, accuracy, and business readiness."
+  },
+  {
+    "id": 97,
+    "question": "A tester discovers that customer names are not being displayed after an API call. What should be checked first?",
+    "options": [
+      "Whether the API response was correctly mapped to Cognigy variables.",
+      "Whether the Knowledge Store is indexed.",
+      "Whether Analytics is enabled.",
+      "Whether the Voice Gateway is connected."
+    ],
+    "answer": 0,
+    "explanation": "Missing customer data is commonly caused by incorrect variable mapping or JSON path extraction after the API response."
+  },
+  {
+    "id": 98,
+    "question": "Why is User Acceptance Testing (UAT) important?",
+    "options": [
+      "It measures internet speed.",
+      "It validates that the AI Agent meets business and user requirements before production deployment.",
+      "It replaces developer testing.",
+      "It automatically fixes Flow errors."
+    ],
+    "answer": 1,
+    "explanation": "UAT ensures that real business users confirm the AI Agent behaves according to operational requirements."
+  },
+  {
+    "id": 99,
+    "question": "After deploying an AI Agent, what should developers continue to do?",
+    "options": [
+      "Stop making changes.",
+      "Continuously monitor Analytics, review conversation transcripts, and improve the AI Agent.",
+      "Delete conversation history.",
+      "Disable logging."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents require continuous optimization based on customer interactions and Analytics insights."
+  },
+  {
+    "id": 100,
+    "question": "Which development lifecycle best reflects Cognigy AI Agent implementation?",
+    "options": [
+      "Build → Deploy → Forget",
+      "Build → Test → Deploy → Monitor → Improve",
+      "Deploy → Build → Test",
+      "Build → Archive"
+    ],
+    "answer": 1,
+    "explanation": "Successful enterprise AI implementations follow an iterative lifecycle of development, testing, deployment, monitoring, and continuous improvement."
+  },
+  {
+    "id": 101,
+    "question": "What is the primary purpose of Cognigy Voice Gateway?",
+    "options": [
+      "Store Knowledge AI documents",
+      "Enable AI Agents to communicate through voice channels using telephony services",
+      "Monitor Analytics dashboards",
+      "Configure REST APIs"
+    ],
+    "answer": 1,
+    "explanation": "Voice Gateway connects Cognigy AI Agents to telephony providers, enabling customers to interact using natural speech over phone calls."
+  },
+  {
+    "id": 102,
+    "question": "Before an AI Agent can understand a caller's speech, what must happen first?",
+    "options": [
+      "The speech must be converted into text using Speech-to-Text (STT).",
+      "The speech must be translated into JSON.",
+      "The speech must be stored in the Knowledge Store.",
+      "The speech must be analyzed by Analytics."
+    ],
+    "answer": 0,
+    "explanation": "Speech-to-Text (STT) converts spoken language into text so Cognigy's NLU can process it."
+  },
+  {
+    "id": 103,
+    "question": "After the AI Agent generates a text response, which technology converts it back into spoken audio?",
+    "options": [
+      "Optical Character Recognition (OCR)",
+      "Speech-to-Text (STT)",
+      "Text-to-Speech (TTS)",
+      "Endpoint Transformer"
+    ],
+    "answer": 2,
+    "explanation": "Text-to-Speech (TTS) synthesizes natural-sounding speech from the AI Agent's text response."
+  },
+  {
+    "id": 104,
+    "question": "Which sequence correctly represents a voice interaction in Cognigy?",
+    "options": [
+      "Text → Speech → Intent → API",
+      "Speech → STT → NLU → Flow → TTS → Speech",
+      "API → Analytics → Flow → Voice Gateway",
+      "Endpoint → OCR → Knowledge Store"
+    ],
+    "answer": 1,
+    "explanation": "Voice conversations follow the sequence of capturing speech, converting it to text, processing it through the Flow, then converting the response back into speech."
+  },
+  {
+    "id": 105,
+    "question": "What is the purpose of SSML (Speech Synthesis Markup Language)?",
+    "options": [
+      "Encrypt API traffic.",
+      "Improve how synthesized speech sounds by controlling pronunciation, pauses, emphasis, and speaking style.",
+      "Store Knowledge AI documents.",
+      "Configure Analytics dashboards."
+    ],
+    "answer": 1,
+    "explanation": "SSML enhances speech quality by allowing developers to control pronunciation, pacing, volume, and emphasis."
+  },
+  {
+    "id": 106,
+    "question": "Which SSML element is commonly used to insert a pause into synthesized speech?",
+    "options": [
+      "<break>",
+      "<intent>",
+      "<entity>",
+      "<prompt>"
+    ],
+    "answer": 0,
+    "explanation": "The <break> tag adds natural pauses, making synthesized speech easier to understand."
+  },
+  {
+    "id": 107,
+    "question": "Why is conversation design different for voice channels compared to chat channels?",
+    "options": [
+      "Voice conversations rely on listening and speaking, requiring shorter, clearer prompts.",
+      "Voice conversations cannot use APIs.",
+      "Voice channels do not support AI Agents.",
+      "Voice conversations cannot access customer profiles."
+    ],
+    "answer": 0,
+    "explanation": "Voice interfaces require concise responses because users cannot easily scan or reread information as they can in chat."
+  },
+  {
+    "id": 108,
+    "question": "What should an AI Voice Agent do if it does not clearly understand what the caller said?",
+    "options": [
+      "Guess the customer's request.",
+      "Politely ask the caller to repeat or rephrase the request.",
+      "End the phone call immediately.",
+      "Transfer every call to a human agent."
+    ],
+    "answer": 1,
+    "explanation": "Voice bots should request clarification rather than making assumptions that could lead to incorrect actions."
+  },
+  {
+    "id": 109,
+    "question": "Why should long lists of information generally be avoided in voice conversations?",
+    "options": [
+      "Voice Gateway cannot process lists.",
+      "They are difficult for callers to remember and follow.",
+      "They consume more API calls.",
+      "They reduce internet speed."
+    ],
+    "answer": 1,
+    "explanation": "Voice experiences should minimize cognitive load by providing concise, easy-to-follow information."
+  },
+  {
+    "id": 110,
+    "question": "Which best practice improves the overall customer experience for AI Voice Agents?",
+    "options": [
+      "Use long technical explanations.",
+      "Speak naturally, confirm important information, and allow customers to interrupt when appropriate.",
+      "Read API responses exactly as received.",
+      "Avoid asking clarification questions."
+    ],
+    "answer": 1,
+    "explanation": "Effective voice experiences sound conversational, confirm critical information, and support natural human dialogue."
+  },
+  {
+    "id": 111,
+    "question": "Why is prompt engineering important when building an AI Agent powered by a Large Language Model (LLM)?",
+    "options": [
+      "It improves internet speed.",
+      "It guides the LLM to generate accurate, consistent, and business-appropriate responses.",
+      "It replaces APIs.",
+      "It eliminates the need for Knowledge AI."
+    ],
+    "answer": 1,
+    "explanation": "Prompt engineering provides clear instructions that help the LLM produce responses aligned with business objectives, tone, and policies."
+  },
+  {
+    "id": 112,
+    "question": "Which prompt writing approach generally produces the most reliable AI responses?",
+    "options": [
+      "Vague and open-ended instructions.",
+      "Clear, specific, and structured instructions.",
+      "Random keywords.",
+      "Very short prompts without context."
+    ],
+    "answer": 1,
+    "explanation": "Well-structured prompts reduce ambiguity and improve response consistency."
+  },
+  {
+    "id": 113,
+    "question": "Why should developers define the AI Agent's role in the system prompt?",
+    "options": [
+      "To increase API speed.",
+      "To establish the AI Agent's identity, behavior, and responsibilities.",
+      "To improve Analytics reporting.",
+      "To configure Voice Gateway."
+    ],
+    "answer": 1,
+    "explanation": "Defining the AI Agent's role ensures consistent behavior throughout customer interactions."
+  },
+  {
+    "id": 114,
+    "question": "Which instruction is an example of setting communication style in a prompt?",
+    "options": [
+      "\"Store customer data permanently.\"",
+      "\"Always respond professionally, politely, and concisely.\"",
+      "\"Ignore customer questions.\"",
+      "\"Disable authentication.\""
+    ],
+    "answer": 1,
+    "explanation": "Prompt instructions can specify tone, personality, and communication style."
+  },
+  {
+    "id": 115,
+    "question": "Why should AI Agents avoid generating answers outside the organization's approved knowledge?",
+    "options": [
+      "It reduces API latency.",
+      "It may produce inaccurate or misleading information (hallucinations).",
+      "It increases speech quality.",
+      "It improves conversation speed."
+    ],
+    "answer": 1,
+    "explanation": "Restricting responses to trusted enterprise knowledge reduces hallucinations and improves reliability."
+  },
+  {
+    "id": 116,
+    "question": "What is the purpose of grounding an LLM with Knowledge AI?",
+    "options": [
+      "To improve internet connectivity.",
+      "To ensure responses are based on trusted company documents rather than the model's general knowledge.",
+      "To replace REST APIs.",
+      "To reduce Analytics data."
+    ],
+    "answer": 1,
+    "explanation": "Grounding keeps responses aligned with organizational policies and documentation."
+  },
+  {
+    "id": 117,
+    "question": "Which prompt instruction best reduces hallucinations?",
+    "options": [
+      "\"Answer every question, even if you're unsure.\"",
+      "\"If the answer cannot be found in the provided knowledge, politely state that you do not know.\"",
+      "\"Create an answer using your imagination.\"",
+      "\"Guess the most likely response.\""
+    ],
+    "answer": 1,
+    "explanation": "Prompting the AI to admit uncertainty is a proven method for reducing hallucinations."
+  },
+  {
+    "id": 118,
+    "question": "Why is consistency important when writing AI prompts?",
+    "options": [
+      "It increases storage capacity.",
+      "It helps ensure similar customer questions receive predictable and reliable responses.",
+      "It reduces Voice Gateway licensing costs.",
+      "It improves network bandwidth."
+    ],
+    "answer": 1,
+    "explanation": "Consistent prompts create consistent AI behavior and improve customer trust."
+  },
+  {
+    "id": 119,
+    "question": "When updating a prompt, what is considered a best practice?",
+    "options": [
+      "Change multiple instructions simultaneously without testing.",
+      "Test each significant prompt change to evaluate its impact on AI behavior.",
+      "Never modify prompts after deployment.",
+      "Remove all business rules."
+    ],
+    "answer": 1,
+    "explanation": "Incremental testing makes it easier to identify which changes improve or negatively affect AI performance."
+  },
+  {
+    "id": 120,
+    "question": "Which statement best summarizes effective enterprise prompt engineering?",
+    "options": [
+      "Keep prompts as short and generic as possible.",
+      "Clearly define the AI's role, objectives, behavior, constraints, and available knowledge.",
+      "Allow the AI to answer any question regardless of company policy.",
+      "Rely only on the LLM's built-in knowledge."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise prompts should clearly establish the AI Agent's purpose, tone, knowledge boundaries, and behavioral expectations to ensure safe and consistent responses."
+  },
+  {
+    "id": 121,
+    "question": "Which factor is most important when designing an enterprise AI Agent for customer service?",
+    "options": [
+      "Using the largest possible LLM",
+      "Providing accurate, relevant, and consistent responses that follow business policies",
+      "Responding as quickly as possible without verification",
+      "Answering every question regardless of available information"
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents must prioritize accuracy, compliance, and consistency over speed or creativity."
+  },
+  {
+    "id": 122,
+    "question": "Why should an AI Agent verify customer identity before providing account-specific information?",
+    "options": [
+      "To increase conversation length",
+      "To comply with security and privacy requirements",
+      "To improve Analytics reports",
+      "To reduce API calls"
+    ],
+    "answer": 1,
+    "explanation": "Identity verification protects sensitive customer information and helps organizations comply with security and data privacy regulations."
+  },
+  {
+    "id": 123,
+    "question": "A customer asks a question that is not covered in the Knowledge Store. What is the best response from the AI Agent?",
+    "options": [
+      "Create an answer based on assumptions.",
+      "Inform the customer that the information is unavailable and recommend an alternative, such as contacting support.",
+      "Search unrelated company documents.",
+      "Ignore the question."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should avoid hallucinating answers and instead provide honest responses when information is unavailable."
+  },
+  {
+    "id": 124,
+    "question": "What is the main benefit of combining Knowledge AI with backend API integrations?",
+    "options": [
+      "It eliminates the need for conversation flows.",
+      "It enables the AI Agent to both answer informational questions and perform business transactions.",
+      "It replaces Speech-to-Text.",
+      "It removes the need for authentication."
+    ],
+    "answer": 1,
+    "explanation": "Knowledge AI provides information, while APIs allow the AI Agent to execute actions such as checking orders or updating customer records."
+  },
+  {
+    "id": 125,
+    "question": "Which action best demonstrates good conversational design?",
+    "options": [
+      "Responding with lengthy paragraphs containing all available information.",
+      "Asking only one relevant question at a time and guiding the customer through the process.",
+      "Repeating the same prompt after every response.",
+      "Ending the conversation whenever clarification is needed."
+    ],
+    "answer": 1,
+    "explanation": "Breaking conversations into manageable steps improves usability and reduces customer confusion."
+  },
+  {
+    "id": 126,
+    "question": "Which practice helps maintain an AI Agent's long-term performance after deployment?",
+    "options": [
+      "Never updating the Knowledge Store.",
+      "Regularly reviewing Analytics, conversation transcripts, and customer feedback.",
+      "Removing conversation logs.",
+      "Disabling monitoring."
+    ],
+    "answer": 1,
+    "explanation": "Continuous monitoring and improvement are essential for maintaining AI quality as customer needs evolve."
+  },
+  {
+    "id": 127,
+    "question": "Why should organizations periodically update their Knowledge Store?",
+    "options": [
+      "To increase API response speed.",
+      "To ensure AI responses remain accurate as business information changes.",
+      "To improve Speech-to-Text accuracy.",
+      "To reduce storage costs."
+    ],
+    "answer": 1,
+    "explanation": "Outdated documentation can cause AI Agents to provide obsolete or incorrect information."
+  },
+  {
+    "id": 128,
+    "question": "Which situation would most likely require escalation to a live agent?",
+    "options": [
+      "The customer asks for office opening hours that are available in the Knowledge Store.",
+      "The customer requests a complex exception that requires human approval.",
+      "The customer asks about a published company policy.",
+      "The customer greets the AI Agent."
+    ],
+    "answer": 1,
+    "explanation": "Requests involving exceptions, approvals, or sensitive decision-making are typically better handled by human agents."
+  },
+  {
+    "id": 129,
+    "question": "What is the primary goal of an enterprise AI Agent?",
+    "options": [
+      "Replace every human employee.",
+      "Automate appropriate customer interactions while providing seamless escalation when necessary.",
+      "Answer every question using internet searches.",
+      "Eliminate backend business systems."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents complement human agents by automating routine interactions while escalating situations that require human judgment."
+  },
+  {
+    "id": 130,
+    "question": "Which statement best summarizes a successful enterprise AI implementation?",
+    "options": [
+      "Deploy once and avoid future changes.",
+      "Build an AI Agent that combines trusted knowledge, business integrations, continuous monitoring, and ongoing optimization.",
+      "Depend entirely on the LLM's built-in knowledge.",
+      "Focus only on reducing operational costs."
+    ],
+    "answer": 1,
+    "explanation": "Successful AI implementations combine Knowledge AI, API integrations, conversation design, analytics, governance, and continuous improvement to deliver long-term business value."
+  },
+  {
+    "id": 131,
+    "question": "What is the primary benefit of designing reusable Flows in Cognigy?",
+    "options": [
+      "They consume more memory.",
+      "They reduce duplication and simplify maintenance.",
+      "They eliminate the need for APIs.",
+      "They automatically improve NLU accuracy."
+    ],
+    "answer": 1,
+    "explanation": "Reusable Flows allow developers to centralize common business logic, reducing maintenance effort and improving consistency across projects."
+  },
+  {
+    "id": 132,
+    "question": "Why should developers avoid hardcoding business values (e.g., URLs, API keys, company names) directly into Flows?",
+    "options": [
+      "It increases Analytics storage.",
+      "It makes updates more difficult and introduces security risks.",
+      "It slows down the Interaction Panel.",
+      "It improves debugging."
+    ],
+    "answer": 1,
+    "explanation": "Configuration values should be stored securely and managed separately to improve maintainability and security."
+  },
+  {
+    "id": 133,
+    "question": "Which development approach makes enterprise AI projects easier to maintain over time?",
+    "options": [
+      "Copying the same logic into every Flow.",
+      "Creating modular and reusable components.",
+      "Storing all logic inside one large Flow.",
+      "Avoiding documentation."
+    ],
+    "answer": 1,
+    "explanation": "Modular design makes updates easier, reduces duplication, and improves scalability."
+  },
+  {
+    "id": 134,
+    "question": "Why is documentation important when developing Cognigy AI Agents?",
+    "options": [
+      "It improves Speech-to-Text accuracy.",
+      "It helps other developers understand, maintain, and troubleshoot the solution.",
+      "It increases API response speed.",
+      "It automatically updates the Knowledge Store."
+    ],
+    "answer": 1,
+    "explanation": "Good documentation supports collaboration, maintenance, onboarding, and future enhancements."
+  },
+  {
+    "id": 135,
+    "question": "What is the recommended approach when making significant changes to a production Flow?",
+    "options": [
+      "Modify the production Flow directly without testing.",
+      "Test the changes in a development or staging environment before deployment.",
+      "Deploy immediately after saving.",
+      "Delete the previous version."
+    ],
+    "answer": 1,
+    "explanation": "Changes should always be validated in a non-production environment before being released."
+  },
+  {
+    "id": 136,
+    "question": "Which practice best supports version control during AI Agent development?",
+    "options": [
+      "Frequently overwrite existing Flows without records.",
+      "Maintain version history and document significant changes.",
+      "Rename Flows randomly.",
+      "Delete older versions immediately."
+    ],
+    "answer": 1,
+    "explanation": "Version control helps teams track changes, troubleshoot issues, and roll back if necessary."
+  },
+  {
+    "id": 137,
+    "question": "Why should organizations establish coding standards for Cognigy development?",
+    "options": [
+      "To reduce internet bandwidth.",
+      "To ensure consistency, readability, and easier collaboration among developers.",
+      "To eliminate the need for testing.",
+      "To improve Speech-to-Text performance."
+    ],
+    "answer": 1,
+    "explanation": "Consistent development standards improve maintainability and reduce implementation errors."
+  },
+  {
+    "id": 138,
+    "question": "Before connecting an AI Agent to a production backend system, what should be verified?",
+    "options": [
+      "Only the API URL.",
+      "Authentication, permissions, error handling, and business logic.",
+      "Only Analytics dashboards.",
+      "Only Voice Gateway settings."
+    ],
+    "answer": 1,
+    "explanation": "Production integrations require complete validation to ensure security, reliability, and correct business behavior."
+  },
+  {
+    "id": 139,
+    "question": "What is one advantage of separating business logic from conversation design?",
+    "options": [
+      "It prevents API authentication.",
+      "It allows conversation changes without affecting backend processing logic.",
+      "It removes the need for Knowledge AI.",
+      "It improves internet speed."
+    ],
+    "answer": 1,
+    "explanation": "Separating concerns improves flexibility, maintainability, and system scalability."
+  },
+  {
+    "id": 140,
+    "question": "Which statement best reflects enterprise AI development best practices?",
+    "options": [
+      "Build quickly and deploy without testing.",
+      "Develop modularly, document thoroughly, test carefully, monitor continuously, and improve iteratively.",
+      "Rely solely on the LLM for business decisions.",
+      "Avoid updating AI Agents after deployment."
+    ],
+    "answer": 1,
+    "explanation": "Successful enterprise AI solutions follow disciplined software engineering practices, including modular development, testing, monitoring, documentation, and continuous improvement."
+  },
+  {
+    "id": 141,
+    "question": "What is the primary purpose of AI governance in an enterprise AI deployment?",
+    "options": [
+      "To increase API response speed.",
+      "To ensure AI systems operate safely, ethically, securely, and in compliance with organizational policies.",
+      "To replace all human decision-making.",
+      "To reduce internet bandwidth."
+    ],
+    "answer": 1,
+    "explanation": "AI governance establishes policies, controls, and oversight to ensure AI systems are responsible, secure, transparent, and aligned with business and regulatory requirements."
+  },
+  {
+    "id": 142,
+    "question": "Which of the following is considered Personally Identifiable Information (PII)?",
+    "options": [
+      "Product catalog number",
+      "Customer's full name and identification number",
+      "Company operating hours",
+      "Public marketing brochure"
+    ],
+    "answer": 1,
+    "explanation": "Information such as names, identification numbers, addresses, and phone numbers are considered PII and must be protected."
+  },
+  {
+    "id": 143,
+    "question": "Why should AI Agents follow the principle of least privilege when accessing backend systems?",
+    "options": [
+      "To increase response creativity.",
+      "To ensure the AI only has access to the data and functions necessary for its tasks.",
+      "To improve speech synthesis.",
+      "To increase conversation volume."
+    ],
+    "answer": 1,
+    "explanation": "Limiting system permissions reduces security risks and minimizes the potential impact of compromised credentials."
+  },
+  {
+    "id": 144,
+    "question": "Which practice best protects sensitive customer information during AI conversations?",
+    "options": [
+      "Display all backend data returned by APIs.",
+      "Mask or limit sensitive information and verify customer identity before disclosure.",
+      "Store all customer information permanently.",
+      "Disable authentication for faster responses."
+    ],
+    "answer": 1,
+    "explanation": "Organizations should expose only the necessary information and verify the customer's identity before sharing sensitive details."
+  },
+  {
+    "id": 145,
+    "question": "Why should conversation logs be reviewed regularly?",
+    "options": [
+      "To improve internet connectivity.",
+      "To identify quality issues, security concerns, compliance risks, and opportunities for improvement.",
+      "To increase Knowledge Store size.",
+      "To replace Analytics dashboards."
+    ],
+    "answer": 1,
+    "explanation": "Conversation reviews help organizations detect policy violations, customer pain points, and opportunities to optimize AI performance."
+  },
+  {
+    "id": 146,
+    "question": "What should an AI Agent do if it receives a request that violates company policy?",
+    "options": [
+      "Fulfill the request immediately.",
+      "Politely decline the request and follow the organization's defined policies or escalation procedures.",
+      "Ignore the policy.",
+      "Invent an alternative solution."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should always comply with organizational policies and escalate or decline requests when appropriate."
+  },
+  {
+    "id": 147,
+    "question": "Which of the following best demonstrates responsible AI behavior?",
+    "options": [
+      "Guessing answers to maintain conversation flow.",
+      "Providing only verified information, acknowledging uncertainty, and escalating when necessary.",
+      "Responding even when business rules are unclear.",
+      "Ignoring customer verification procedures."
+    ],
+    "answer": 1,
+    "explanation": "Responsible AI prioritizes accuracy, transparency, and appropriate escalation instead of making assumptions."
+  },
+  {
+    "id": 148,
+    "question": "Why is human oversight still important in enterprise AI solutions?",
+    "options": [
+      "AI systems never make mistakes.",
+      "Some decisions require human judgment, policy interpretation, or exception handling.",
+      "Human oversight slows down operations.",
+      "AI cannot process customer conversations."
+    ],
+    "answer": 1,
+    "explanation": "While AI automates routine tasks, humans remain essential for complex decisions, regulatory compliance, and exception management."
+  },
+  {
+    "id": 149,
+    "question": "Which KPI would best indicate that an AI Agent is delivering a positive customer experience?",
+    "options": [
+      "High abandonment rate.",
+      "Increasing containment rate combined with strong customer satisfaction (CSAT).",
+      "More authentication failures.",
+      "Higher API timeout rates."
+    ],
+    "answer": 1,
+    "explanation": "High containment together with strong CSAT indicates that customers are receiving effective and satisfactory service from the AI Agent."
+  },
+  {
+    "id": 150,
+    "question": "Which statement best summarizes the goal of enterprise conversational AI?",
+    "options": [
+      "Replace every customer service employee.",
+      "Deliver secure, accurate, compliant, and efficient customer interactions while seamlessly collaborating with human agents.",
+      "Answer every question using internet knowledge.",
+      "Eliminate all business processes."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise conversational AI is designed to enhance customer service by automating suitable interactions while maintaining security, compliance, and smooth collaboration with human agents."
+  },
+  {
+    "id": 151,
+    "question": "Why is it important to collect customer feedback after deploying an AI Agent?",
+    "options": [
+      "To increase server memory.",
+      "To identify customer satisfaction, usability issues, and opportunities for improvement.",
+      "To reduce API authentication.",
+      "To improve internet speed."
+    ],
+    "answer": 1,
+    "explanation": "Customer feedback helps organizations understand how well the AI Agent meets user expectations and where improvements are needed."
+  },
+  {
+    "id": 152,
+    "question": "Which customer interaction should typically be automated by an AI Agent?",
+    "options": [
+      "Routine and repetitive inquiries with well-defined processes.",
+      "Sensitive legal disputes requiring human judgment.",
+      "Complex complaints requiring management approval.",
+      "Employee disciplinary discussions."
+    ],
+    "answer": 0,
+    "explanation": "AI Agents are most effective at automating repetitive, rule-based interactions, allowing human agents to focus on more complex cases."
+  },
+  {
+    "id": 153,
+    "question": "Which factor contributes most to a successful AI implementation?",
+    "options": [
+      "Purchasing the most expensive AI model.",
+      "Clearly defined business objectives and measurable success metrics.",
+      "Deploying without user testing.",
+      "Using multiple LLMs simultaneously."
+    ],
+    "answer": 1,
+    "explanation": "Successful AI projects begin with clear objectives and measurable KPIs aligned with business outcomes."
+  },
+  {
+    "id": 154,
+    "question": "Why should AI Agent responses remain consistent across different customer channels (chat, voice, messaging)?",
+    "options": [
+      "To reduce cloud hosting costs.",
+      "To provide a unified customer experience regardless of the communication channel.",
+      "To increase API calls.",
+      "To improve network latency."
+    ],
+    "answer": 1,
+    "explanation": "Customers expect the same policies, information, and service quality regardless of the channel they use."
+  },
+  {
+    "id": 155,
+    "question": "What is one advantage of integrating AI Agents with CRM systems?",
+    "options": [
+      "Eliminate the need for customer authentication.",
+      "Personalize conversations using customer history and account information.",
+      "Replace Knowledge AI.",
+      "Automatically update company policies."
+    ],
+    "answer": 1,
+    "explanation": "CRM integration allows AI Agents to deliver more personalized and efficient customer experiences."
+  },
+  {
+    "id": 156,
+    "question": "Which deployment strategy best minimizes business risk when releasing a new AI Agent?",
+    "options": [
+      "Deploy directly to all customers immediately.",
+      "Conduct a pilot or phased rollout before full production deployment.",
+      "Skip User Acceptance Testing.",
+      "Disable monitoring during deployment."
+    ],
+    "answer": 1,
+    "explanation": "A phased rollout allows organizations to identify issues with a smaller user group before a full-scale deployment."
+  },
+  {
+    "id": 157,
+    "question": "Why should fallback responses be carefully designed?",
+    "options": [
+      "They improve internet connectivity.",
+      "They maintain a positive customer experience when the AI cannot confidently answer a question.",
+      "They reduce database storage.",
+      "They eliminate API integrations."
+    ],
+    "answer": 1,
+    "explanation": "Helpful fallback responses prevent customer frustration and provide guidance toward resolution."
+  },
+  {
+    "id": 158,
+    "question": "Which scenario best demonstrates successful AI-human collaboration?",
+    "options": [
+      "The AI attempts to resolve every request, regardless of complexity.",
+      "The AI resolves routine inquiries and transfers complex or sensitive cases to human agents.",
+      "Human agents answer every customer inquiry.",
+      "AI Agents operate without any human supervision."
+    ],
+    "answer": 1,
+    "explanation": "The best customer experience comes from combining AI efficiency with human expertise for exceptional situations."
+  },
+  {
+    "id": 159,
+    "question": "Which metric would best indicate that an AI Agent is becoming more effective over time?",
+    "options": [
+      "Increasing customer complaints.",
+      "Higher containment rate, lower escalation rate, and improved customer satisfaction (CSAT).",
+      "More authentication failures.",
+      "Longer conversation durations for simple inquiries."
+    ],
+    "answer": 1,
+    "explanation": "Improved automation efficiency combined with higher customer satisfaction demonstrates ongoing AI optimization."
+  },
+  {
+    "id": 160,
+    "question": "Which statement best reflects the future role of enterprise conversational AI?",
+    "options": [
+      "AI will replace all human employees.",
+      "AI will increasingly work alongside human employees by automating repetitive tasks while humans manage complex, emotional, and judgment-based interactions.",
+      "AI will eliminate the need for customer service.",
+      "AI should operate without governance or oversight."
+    ],
+    "answer": 1,
+    "explanation": "The future of enterprise AI is centered on human-AI collaboration, where AI improves productivity while humans continue handling high-value interactions requiring empathy and decision-making."
+  },
+  {
+    "id": 161,
+    "question": "What is the primary advantage of using Generative AI within Cognigy AI Agents?",
+    "options": [
+      "It replaces all backend integrations.",
+      "It generates natural, context-aware responses while following defined business instructions.",
+      "It eliminates the need for conversation flows.",
+      "It only works with voice channels."
+    ],
+    "answer": 1,
+    "explanation": "Generative AI enables AI Agents to produce conversational, context-aware responses while adhering to the business rules and prompts configured by developers."
+  },
+  {
+    "id": 162,
+    "question": "Which factor most directly influences the quality of an LLM's response?",
+    "options": [
+      "Internet connection speed.",
+      "The quality of the prompt and the information provided to the model.",
+      "The customer's browser.",
+      "Analytics settings."
+    ],
+    "answer": 1,
+    "explanation": "LLMs generate responses based on the instructions and context provided. Better prompts generally produce better results."
+  },
+  {
+    "id": 163,
+    "question": "Why should an AI Agent ask follow-up questions instead of making assumptions?",
+    "options": [
+      "To increase conversation duration.",
+      "To collect the necessary information before performing an action or providing an accurate answer.",
+      "To reduce API usage.",
+      "To improve voice quality."
+    ],
+    "answer": 1,
+    "explanation": "Clarifying questions reduce errors and improve the quality of responses by ensuring sufficient information is available."
+  },
+  {
+    "id": 164,
+    "question": "Which practice helps improve customer trust in an AI Agent?",
+    "options": [
+      "Guessing answers when information is unavailable.",
+      "Clearly communicating limitations and providing accurate information.",
+      "Answering every question regardless of confidence.",
+      "Hiding system limitations."
+    ],
+    "answer": 1,
+    "explanation": "Transparency builds customer confidence and prevents misinformation."
+  },
+  {
+    "id": 165,
+    "question": "When integrating an AI Agent with multiple backend systems, what is a recommended best practice?",
+    "options": [
+      "Combine all business logic into one API.",
+      "Keep integrations modular and handle errors independently for each system.",
+      "Disable logging.",
+      "Ignore API failures."
+    ],
+    "answer": 1,
+    "explanation": "Modular integrations simplify maintenance and prevent failures in one system from affecting unrelated functions."
+  },
+  {
+    "id": 166,
+    "question": "Which scenario best demonstrates contextual awareness?",
+    "options": [
+      "The AI Agent asks for the customer's account number every time they send a message.",
+      "The AI Agent remembers information already collected during the current conversation and avoids asking for it again.",
+      "The AI Agent ignores previous customer responses.",
+      "The AI Agent restarts the conversation after every question."
+    ],
+    "answer": 1,
+    "explanation": "Good conversational AI uses conversation context to avoid unnecessary repetition and create a smoother customer experience."
+  },
+  {
+    "id": 167,
+    "question": "Why is it important to validate customer input before calling an API?",
+    "options": [
+      "To increase Analytics reporting.",
+      "To prevent invalid requests and reduce unnecessary API failures.",
+      "To improve Speech-to-Text accuracy.",
+      "To increase conversation length."
+    ],
+    "answer": 1,
+    "explanation": "Validating required fields before calling an API improves reliability and reduces processing errors."
+  },
+  {
+    "id": 168,
+    "question": "Which customer experience principle is demonstrated when an AI Agent summarizes information before asking for confirmation?",
+    "options": [
+      "Randomization",
+      "Confirmation and validation",
+      "Hallucination",
+      "Endpoint transformation"
+    ],
+    "answer": 1,
+    "explanation": "Confirming important details before executing an action reduces mistakes and improves customer confidence."
+  },
+  {
+    "id": 169,
+    "question": "Why should organizations regularly retrain or update AI Agents?",
+    "options": [
+      "AI models automatically become inaccurate after 24 hours.",
+      "Business processes, products, policies, and customer expectations evolve over time.",
+      "To reduce cloud storage.",
+      "To improve internet connectivity."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should evolve alongside the organization to ensure they continue providing accurate and relevant responses."
+  },
+  {
+    "id": 170,
+    "question": "Which statement best represents a mature enterprise AI strategy?",
+    "options": [
+      "Focus only on reducing operational costs.",
+      "Combine AI technology, business processes, governance, security, analytics, and continuous improvement to deliver sustainable business value.",
+      "Replace all employees with AI.",
+      "Depend solely on one LLM without monitoring."
+    ],
+    "answer": 1,
+    "explanation": "Successful enterprise AI initiatives combine technology with governance, operational excellence, business integration, and continuous optimization to maximize long-term value."
+  },
+  {
+    "id": 171,
+    "question": "What is the primary purpose of session management in Cognigy?",
+    "options": [
+      "To increase API response speed.",
+      "To maintain the state and context of a customer's conversation throughout a session.",
+      "To generate Knowledge Store documents.",
+      "To authenticate administrators."
+    ],
+    "answer": 1,
+    "explanation": "Session management allows the AI Agent to remember information collected during an interaction, enabling natural and contextual conversations."
+  },
+  {
+    "id": 172,
+    "question": "Why should developers minimize the number of API calls during a conversation?",
+    "options": [
+      "To improve Speech-to-Text quality.",
+      "To reduce latency, improve performance, and avoid unnecessary backend load.",
+      "To increase Analytics reports.",
+      "To make conversations longer."
+    ],
+    "answer": 1,
+    "explanation": "Efficient API usage improves response time, reduces costs, and enhances the overall customer experience."
+  },
+  {
+    "id": 173,
+    "question": "Which practice helps ensure an AI Agent remains responsive when a backend system is temporarily unavailable?",
+    "options": [
+      "Continue retrying indefinitely.",
+      "Implement timeout settings, graceful error handling, and fallback responses.",
+      "Ignore the API failure.",
+      "Display the backend error message to the customer."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI solutions should fail gracefully by providing meaningful alternatives when external services are unavailable."
+  },
+  {
+    "id": 174,
+    "question": "Why is conversation context important in multi-turn interactions?",
+    "options": [
+      "It improves internet connectivity.",
+      "It allows the AI Agent to understand previous exchanges and provide more relevant responses.",
+      "It replaces the Knowledge Store.",
+      "It eliminates API integrations."
+    ],
+    "answer": 1,
+    "explanation": "Maintaining context allows AI Agents to avoid repetitive questions and deliver a more natural conversational experience."
+  },
+  {
+    "id": 175,
+    "question": "What should an AI Agent do before executing a high-impact customer request such as cancelling an order?",
+    "options": [
+      "Execute the request immediately.",
+      "Confirm the customer's intent before performing the action.",
+      "Skip customer verification.",
+      "Restart the conversation."
+    ],
+    "answer": 1,
+    "explanation": "Confirmation helps prevent accidental or unauthorized transactions and improves customer confidence."
+  },
+  {
+    "id": 176,
+    "question": "Which design principle improves readability in AI-generated responses?",
+    "options": [
+      "Use long paragraphs with technical terminology.",
+      "Use concise sentences, bullet points where appropriate, and clear language.",
+      "Provide every available detail regardless of relevance.",
+      "Repeat the same information multiple times."
+    ],
+    "answer": 1,
+    "explanation": "Clear and concise responses improve comprehension and create a better customer experience."
+  },
+  {
+    "id": 177,
+    "question": "Which scenario best demonstrates proactive customer assistance?",
+    "options": [
+      "Waiting for the customer to ask every follow-up question.",
+      "Offering relevant next steps or additional assistance after resolving the customer's request.",
+      "Ending the conversation immediately after answering.",
+      "Redirecting every customer to a live agent."
+    ],
+    "answer": 1,
+    "explanation": "Proactive assistance improves customer satisfaction by anticipating additional needs."
+  },
+  {
+    "id": 178,
+    "question": "Why should AI Agent performance be benchmarked against business KPIs?",
+    "options": [
+      "To compare internet speeds.",
+      "To measure whether the AI solution is delivering expected business outcomes.",
+      "To improve Speech-to-Text accuracy.",
+      "To reduce cloud storage costs."
+    ],
+    "answer": 1,
+    "explanation": "Measuring AI performance against KPIs such as CSAT, containment rate, and resolution time helps determine business success."
+  },
+  {
+    "id": 179,
+    "question": "Which deployment practice helps reduce the impact of unexpected production issues?",
+    "options": [
+      "Remove all logging before deployment.",
+      "Maintain rollback procedures and monitor the deployment closely.",
+      "Skip integration testing.",
+      "Disable analytics."
+    ],
+    "answer": 1,
+    "explanation": "Rollback plans and monitoring allow organizations to recover quickly if issues occur after deployment."
+  },
+  {
+    "id": 180,
+    "question": "Which statement best summarizes the characteristics of a production-ready Cognigy AI Agent?",
+    "options": [
+      "It only answers customer questions.",
+      "It combines accurate knowledge, secure integrations, effective conversation design, robust error handling, analytics, monitoring, and continuous improvement.",
+      "It depends entirely on the LLM's general knowledge.",
+      "It requires no maintenance after deployment."
+    ],
+    "answer": 1,
+    "explanation": "A production-ready AI Agent integrates conversational AI, backend systems, security, monitoring, governance, and continuous optimization to provide reliable enterprise-grade customer service."
+  },
+  {
+    "id": 181,
+    "question": "What is the main objective of conversational flow design in Cognigy?",
+    "options": [
+      "To increase cloud storage.",
+      "To guide users efficiently toward completing their intended task.",
+      "To maximize the number of conversation steps.",
+      "To reduce API authentication."
+    ],
+    "answer": 1,
+    "explanation": "A well-designed conversation flow helps users achieve their goals quickly, naturally, and with minimal confusion."
+  },
+  {
+    "id": 182,
+    "question": "Which approach is recommended when collecting multiple pieces of customer information?",
+    "options": [
+      "Ask all questions in one long paragraph.",
+      "Ask one clear question at a time and validate each response.",
+      "Skip validation to save time.",
+      "Allow customers to enter information in any format without checking."
+    ],
+    "answer": 1,
+    "explanation": "Step-by-step information collection improves accuracy and reduces customer errors."
+  },
+  {
+    "id": 183,
+    "question": "A customer enters an invalid account number. What should the AI Agent do?",
+    "options": [
+      "Continue processing the request.",
+      "Politely inform the customer of the error and ask them to enter the account number again.",
+      "End the conversation.",
+      "Guess the correct account number."
+    ],
+    "answer": 1,
+    "explanation": "Input validation is essential to prevent processing errors and ensure accurate backend transactions."
+  },
+  {
+    "id": 184,
+    "question": "What is the benefit of validating customer input before sending it to an API?",
+    "options": [
+      "It increases internet speed.",
+      "It reduces invalid requests and improves system reliability.",
+      "It improves speech synthesis.",
+      "It increases Knowledge Store size."
+    ],
+    "answer": 1,
+    "explanation": "Validating inputs minimizes API failures and enhances the customer experience."
+  },
+  {
+    "id": 185,
+    "question": "Which response style provides the best customer experience?",
+    "options": [
+      "Highly technical language with system terminology.",
+      "Clear, concise, customer-friendly language.",
+      "Long paragraphs explaining every system process.",
+      "Responses copied directly from API outputs."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should communicate in language that is easy for customers to understand."
+  },
+  {
+    "id": 186,
+    "question": "When should an AI Agent escalate a conversation to a live agent?",
+    "options": [
+      "Whenever a customer greets the AI.",
+      "When the AI cannot confidently resolve the issue or human intervention is required.",
+      "After every API call.",
+      "Only when Analytics reports an error."
+    ],
+    "answer": 1,
+    "explanation": "Escalation should occur when requests exceed the AI's capabilities or require human judgment."
+  },
+  {
+    "id": 187,
+    "question": "Why is conversation logging valuable during production?",
+    "options": [
+      "It improves internet bandwidth.",
+      "It enables troubleshooting, quality assurance, auditing, and continuous improvement.",
+      "It increases token limits.",
+      "It replaces customer surveys."
+    ],
+    "answer": 1,
+    "explanation": "Logs provide developers and administrators with valuable insights into conversation quality and operational issues."
+  },
+  {
+    "id": 188,
+    "question": "Which deployment strategy minimizes customer impact when introducing major AI changes?",
+    "options": [
+      "Deploy all changes globally at once.",
+      "Release updates gradually to a limited group before wider rollout.",
+      "Disable monitoring during deployment.",
+      "Remove fallback responses."
+    ],
+    "answer": 1,
+    "explanation": "Gradual deployment allows organizations to identify and resolve issues before affecting all users."
+  },
+  {
+    "id": 189,
+    "question": "Why should enterprise AI solutions include monitoring and alerting?",
+    "options": [
+      "To increase response length.",
+      "To detect operational issues quickly and maintain service reliability.",
+      "To replace Analytics.",
+      "To improve prompt engineering."
+    ],
+    "answer": 1,
+    "explanation": "Monitoring and alerts enable teams to respond rapidly to failures, performance degradation, or integration issues."
+  },
+  {
+    "id": 190,
+    "question": "Which statement best describes the lifecycle of a successful Cognigy AI Agent?",
+    "options": [
+      "Build → Deploy → Leave Unchanged",
+      "Design → Develop → Test → Deploy → Monitor → Optimize → Enhance",
+      "Deploy → Test → Design",
+      "Build → Archive"
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents require continuous refinement based on business needs, customer feedback, and performance analytics."
+  },
+  {
+    "id": 191,
+    "question": "Which characteristic best distinguishes an enterprise AI Agent from a general-purpose chatbot?",
+    "options": [
+      "It only answers FAQs.",
+      "It integrates with enterprise systems, follows business rules, and performs secure business transactions.",
+      "It only works on websites.",
+      "It cannot access APIs."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents go beyond answering questions by integrating with business applications, enforcing governance, and executing secure business processes."
+  },
+  {
+    "id": 192,
+    "question": "Why is it important to define business objectives before developing an AI Agent?",
+    "options": [
+      "To increase cloud storage.",
+      "To ensure the solution addresses measurable business needs and success criteria.",
+      "To reduce internet bandwidth.",
+      "To improve voice quality."
+    ],
+    "answer": 1,
+    "explanation": "Well-defined objectives guide AI development and enable organizations to measure return on investment (ROI)."
+  },
+  {
+    "id": 193,
+    "question": "Which KPI best measures how effectively an AI Agent resolves customer inquiries without human assistance?",
+    "options": [
+      "CPU utilization",
+      "Containment (Automation) Rate",
+      "Network latency",
+      "Storage capacity"
+    ],
+    "answer": 1,
+    "explanation": "Containment Rate measures the percentage of interactions successfully completed without transferring to a human agent."
+  },
+  {
+    "id": 194,
+    "question": "Which activity should be performed regularly to ensure Knowledge AI remains accurate?",
+    "options": [
+      "Increase server memory.",
+      "Review, update, and re-index company documents whenever business information changes.",
+      "Disable outdated APIs.",
+      "Restart the AI Agent daily."
+    ],
+    "answer": 1,
+    "explanation": "Keeping the Knowledge Store current ensures customers receive accurate and up-to-date information."
+  },
+  {
+    "id": 195,
+    "question": "What is the benefit of separating conversation logic from backend integrations?",
+    "options": [
+      "It makes conversations longer.",
+      "It improves maintainability, scalability, and simplifies future enhancements.",
+      "It removes the need for authentication.",
+      "It reduces speech quality."
+    ],
+    "answer": 1,
+    "explanation": "Separating concerns allows conversation designers and integration developers to work independently while simplifying future maintenance."
+  },
+  {
+    "id": 196,
+    "question": "Which practice best improves AI Agent reliability in production?",
+    "options": [
+      "Disable error handling.",
+      "Implement monitoring, logging, graceful error handling, and regular performance reviews.",
+      "Ignore customer feedback.",
+      "Avoid software updates."
+    ],
+    "answer": 1,
+    "explanation": "Reliable AI systems require proactive monitoring, proper logging, and continuous optimization."
+  },
+  {
+    "id": 197,
+    "question": "What is the purpose of continuous optimization after deployment?",
+    "options": [
+      "To increase token consumption.",
+      "To improve accuracy, customer experience, and operational efficiency based on real-world usage.",
+      "To replace backend systems.",
+      "To eliminate business policies."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should continuously evolve by incorporating customer feedback, analytics, and updated business requirements."
+  },
+  {
+    "id": 198,
+    "question": "Which principle should guide every AI Agent response?",
+    "options": [
+      "Respond as creatively as possible.",
+      "Provide accurate, secure, helpful, and policy-compliant information.",
+      "Maximize conversation length.",
+      "Avoid asking clarification questions."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI responses should prioritize accuracy, security, compliance, and customer value."
+  },
+  {
+    "id": 199,
+    "question": "Which capability allows Cognigy AI Agents to become part of an organization's digital transformation strategy?",
+    "options": [
+      "Only using Large Language Models.",
+      "Integrating conversational AI with enterprise systems, automation, analytics, and business workflows.",
+      "Disabling APIs.",
+      "Limiting the AI Agent to FAQ responses."
+    ],
+    "answer": 1,
+    "explanation": "Cognigy enables organizations to automate end-to-end customer journeys through integrations with enterprise platforms and business processes."
+  },
+  {
+    "id": 200,
+    "question": "Which statement best summarizes the key success factors for building enterprise AI Agents with Cognigy?",
+    "options": [
+      "Deploy quickly and avoid making changes.",
+      "Combine well-designed conversation flows, trusted knowledge, secure integrations, responsible AI governance, continuous monitoring, analytics, and ongoing optimization.",
+      "Depend entirely on the LLM's built-in knowledge.",
+      "Focus only on reducing operational costs."
+    ],
+    "answer": 1,
+    "explanation": "Successful enterprise AI implementations require much more than an LLM. They combine conversational design, Knowledge AI, backend integrations, governance, security, analytics, monitoring, and continuous improvement to deliver sustainable business value."
+  },
+  {
+    "id": 201,
+    "question": "A customer asks, \"I forgot my password.\" Which is the BEST sequence for the AI Agent to follow?",
+    "options": [
+      "Reset the password immediately.",
+      "Verify the customer's identity, trigger the password reset API, and confirm that reset instructions have been sent.",
+      "Ask the customer to contact support.",
+      "Tell the customer to create a new account."
+    ],
+    "answer": 1,
+    "explanation": "Password resets involve sensitive account actions and require customer verification before invoking backend APIs."
+  },
+  {
+    "id": 202,
+    "question": "During an API call, the backend returns an HTTP 500 Internal Server Error. What should the AI Agent do?",
+    "options": [
+      "Display the raw error message.",
+      "Inform the customer that the service is temporarily unavailable, apologize, and offer to retry or connect them to an agent.",
+      "Continue with fabricated information.",
+      "Restart the conversation."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI should gracefully handle server errors without exposing technical information."
+  },
+  {
+    "id": 203,
+    "question": "A customer asks, \"What is my current account balance?\" Which Cognigy capability provides the answer?",
+    "options": [
+      "Knowledge AI",
+      "Backend API Integration",
+      "Analytics Dashboard",
+      "Prompt Engineering"
+    ],
+    "answer": 1,
+    "explanation": "Account balances are dynamic data and must be retrieved from backend business systems via APIs."
+  },
+  {
+    "id": 204,
+    "question": "Which request is MOST appropriate for Knowledge AI instead of an API?",
+    "options": [
+      "\"Cancel my order.\"",
+      "\"What are your business operating hours?\"",
+      "\"Update my email address.\"",
+      "\"Pay my outstanding bill.\""
+    ],
+    "answer": 1,
+    "explanation": "Static company information is best served from Knowledge AI, while transactional requests require APIs."
+  },
+  {
+    "id": 205,
+    "question": "Why is separating informational queries from transactional requests considered a best practice?",
+    "options": [
+      "It improves Speech-to-Text accuracy.",
+      "It allows static information to come from Knowledge AI while business actions are handled securely through APIs.",
+      "It reduces cloud storage.",
+      "It improves internet speed."
+    ],
+    "answer": 1,
+    "explanation": "Different request types require different processing mechanisms to ensure security, accuracy, and maintainability."
+  },
+  {
+    "id": 206,
+    "question": "A customer says, \"I need help,\" without providing additional details. What should the AI Agent do first?",
+    "options": [
+      "Guess the customer's intent.",
+      "Ask a clarifying question to better understand the customer's request.",
+      "Immediately transfer the customer.",
+      "End the conversation."
+    ],
+    "answer": 1,
+    "explanation": "Clarification is essential before determining the appropriate business process."
+  },
+  {
+    "id": 207,
+    "question": "Which KPI would BEST indicate that recent prompt improvements were successful?",
+    "options": [
+      "Increased API latency.",
+      "Higher containment rate and improved customer satisfaction (CSAT).",
+      "Larger Knowledge Store size.",
+      "Longer conversations."
+    ],
+    "answer": 1,
+    "explanation": "Better prompts should improve AI understanding, leading to higher automation success and customer satisfaction."
+  },
+  {
+    "id": 208,
+    "question": "During testing, developers discover that customers frequently ask questions using unexpected wording. What should be improved?",
+    "options": [
+      "Internet bandwidth.",
+      "Prompt design, NLU configuration, and Knowledge AI coverage.",
+      "API authentication.",
+      "Voice Gateway licensing."
+    ],
+    "answer": 1,
+    "explanation": "Expanding intent recognition, improving prompts, and enriching knowledge sources help the AI understand varied customer expressions."
+  },
+  {
+    "id": 209,
+    "question": "Which deployment approach provides the LOWEST operational risk?",
+    "options": [
+      "Deploy directly to all customers.",
+      "Deploy to a small pilot group, monitor performance, then gradually expand deployment.",
+      "Deploy without monitoring.",
+      "Disable rollback capability."
+    ],
+    "answer": 1,
+    "explanation": "A phased rollout allows organizations to identify issues before affecting the entire customer base."
+  },
+  {
+    "id": 210,
+    "question": "Which statement BEST summarizes Cognigy's enterprise AI architecture?",
+    "options": [
+      "AI Agents depend entirely on LLM knowledge.",
+      "AI Agents combine LLM reasoning, Knowledge AI, enterprise APIs, conversation flows, analytics, and governance to deliver secure, intelligent customer experiences.",
+      "Knowledge AI replaces APIs.",
+      "Analytics replaces conversation design."
+    ],
+    "answer": 1,
+    "explanation": "Cognigy's strength lies in combining multiple enterprise components—LLMs, Knowledge AI, Flows, APIs, Analytics, and governance—to build production-ready conversational AI solutions."
+  },
+  {
+    "id": 211,
+    "question": "A customer asks, \"Can you tell me the status of my refund?\" What should the AI Agent do first?",
+    "options": [
+      "Answer using information from the Knowledge Store.",
+      "Verify the customer's identity before retrieving refund details through a backend API.",
+      "Estimate the refund processing time.",
+      "Transfer the customer immediately to a live agent."
+    ],
+    "answer": 1,
+    "explanation": "Refund status is customer-specific information. The AI Agent must first verify the customer's identity before accessing backend systems to retrieve sensitive data."
+  },
+  {
+    "id": 212,
+    "question": "An API returns customer information successfully, but one field is empty. What should the AI Agent do?",
+    "options": [
+      "Display \"null\" to the customer.",
+      "Inform the customer that some information is currently unavailable and continue with the available data.",
+      "Guess the missing value.",
+      "Restart the API call continuously."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should handle incomplete data gracefully without exposing technical values or making assumptions."
+  },
+  {
+    "id": 213,
+    "question": "During testing, developers discover that the AI Agent repeatedly asks for the customer's account number, even after it has already been provided. What is the most likely issue?",
+    "options": [
+      "The Knowledge Store is outdated.",
+      "The account number is not being stored correctly in the Context object.",
+      "Analytics is disabled.",
+      "Voice Gateway is unavailable."
+    ],
+    "answer": 1,
+    "explanation": "Session-specific information should be stored in the Context object so it can be reused throughout the conversation."
+  },
+  {
+    "id": 214,
+    "question": "Which design principle helps reduce customer effort during multi-turn conversations?",
+    "options": [
+      "Ask customers to repeat information frequently.",
+      "Reuse previously collected information whenever appropriate.",
+      "Restart the conversation after every API call.",
+      "Require authentication before every question."
+    ],
+    "answer": 1,
+    "explanation": "Remembering information within the conversation creates a smoother and more efficient customer experience."
+  },
+  {
+    "id": 215,
+    "question": "A customer asks an ambiguous question: \"I need help with my account.\" What is the BEST response?",
+    "options": [
+      "Assume they want to reset their password.",
+      "Ask a clarifying question such as, \"Could you tell me whether you need help with your password, billing, or account settings?\"",
+      "Escalate immediately.",
+      "Provide general company information."
+    ],
+    "answer": 1,
+    "explanation": "Clarifying ambiguous requests prevents incorrect actions and improves intent recognition."
+  },
+  {
+    "id": 216,
+    "question": "Which API response should normally trigger an automatic retry by the AI Agent?",
+    "options": [
+      "HTTP 400 Bad Request",
+      "Temporary timeout or transient network failure",
+      "HTTP 401 Unauthorized",
+      "Invalid customer input"
+    ],
+    "answer": 1,
+    "explanation": "Temporary network issues or timeouts may succeed upon retry, while client errors typically require correction rather than repetition."
+  },
+  {
+    "id": 217,
+    "question": "Which situation should always require explicit customer confirmation before execution?",
+    "options": [
+      "Asking for store opening hours.",
+      "Cancelling a subscription or deleting customer data.",
+      "Providing company contact information.",
+      "Displaying FAQ content."
+    ],
+    "answer": 1,
+    "explanation": "High-impact actions should always be confirmed to prevent accidental or unauthorized changes."
+  },
+  {
+    "id": 218,
+    "question": "Which Analytics trend would most likely indicate that recent Knowledge AI improvements were successful?",
+    "options": [
+      "Increased API failures.",
+      "Higher containment rate and fewer unanswered informational questions.",
+      "Longer authentication times.",
+      "Increased Voice Gateway latency."
+    ],
+    "answer": 1,
+    "explanation": "Better Knowledge AI content enables the AI Agent to answer more informational questions successfully without escalation."
+  },
+  {
+    "id": 219,
+    "question": "During deployment, developers notice that only one communication channel is experiencing failures while others work correctly. Where should they investigate first?",
+    "options": [
+      "Knowledge Store chunking.",
+      "Endpoint or channel-specific configuration.",
+      "Customer Profile object.",
+      "Prompt wording."
+    ],
+    "answer": 1,
+    "explanation": "If only one channel is affected, the issue is most likely related to its endpoint or connector configuration rather than the overall AI Agent."
+  },
+  {
+    "id": 220,
+    "question": "Which architecture best represents an enterprise-grade Cognigy implementation?",
+    "options": [
+      "Customer → LLM → Customer",
+      "Customer → Endpoint → Flow → Knowledge AI / APIs → Business Logic → Response → Customer",
+      "Customer → Analytics → Customer",
+      "Customer → Database → Customer"
+    ],
+    "answer": 1,
+    "explanation": "Enterprise Cognigy solutions combine multiple components including Endpoints, Flows, Knowledge AI, APIs, business logic, and backend systems to provide secure and intelligent conversational experiences."
+  },
+  {
+    "id": 221,
+    "question": "A customer asks, \"I moved to a new address and would like to update my billing details.\" What should the AI Agent do FIRST?",
+    "options": [
+      "Update the address immediately.",
+      "Verify the customer's identity before allowing any account changes.",
+      "Tell the customer to visit the nearest branch.",
+      "Ask the customer to call customer service."
+    ],
+    "answer": 1,
+    "explanation": "Updating billing information is a sensitive account operation. Identity verification should always be completed before any changes are made."
+  },
+  {
+    "id": 222,
+    "question": "A customer asks a question that requires information from both the Knowledge Store and a backend API. What is the BEST approach?",
+    "options": [
+      "Only use the Knowledge Store.",
+      "Only call the API.",
+      "Combine Knowledge AI for static information with API results for customer-specific data.",
+      "Guess the missing information."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents often combine Knowledge AI for company policies with APIs for personalized customer information."
+  },
+  {
+    "id": 223,
+    "question": "An API takes longer than expected to respond. What should the AI Agent do?",
+    "options": [
+      "Continue waiting indefinitely.",
+      "Inform the customer that the request is taking longer than expected and continue processing or provide an alternative.",
+      "Display the API timeout message.",
+      "Cancel the conversation immediately."
+    ],
+    "answer": 1,
+    "explanation": "Keeping the customer informed improves the user experience during temporary delays while preventing frustration."
+  },
+  {
+    "id": 224,
+    "question": "Which design principle best improves the maintainability of Cognigy Flows?",
+    "options": [
+      "Build one very large Flow containing every business process.",
+      "Divide business processes into smaller reusable Flows and components.",
+      "Duplicate business logic across multiple Flows.",
+      "Store all business rules inside prompts."
+    ],
+    "answer": 1,
+    "explanation": "Modular Flow design simplifies maintenance, testing, and future enhancements."
+  },
+  {
+    "id": 225,
+    "question": "Which situation would most likely require escalation to a human agent?",
+    "options": [
+      "A customer asks for the company's office hours.",
+      "A customer requests a refund that requires manager approval due to an exceptional circumstance.",
+      "A customer asks how to reset a password.",
+      "A customer asks about shipping fees."
+    ],
+    "answer": 1,
+    "explanation": "Exception handling and approval-based decisions generally require human judgment."
+  },
+  {
+    "id": 226,
+    "question": "During production monitoring, developers notice that API failures have increased significantly after a software update. What should be the FIRST action?",
+    "options": [
+      "Ignore the issue until customers complain.",
+      "Review deployment logs, API logs, and recent configuration changes to identify the root cause.",
+      "Delete Analytics data.",
+      "Remove customer authentication."
+    ],
+    "answer": 1,
+    "explanation": "Troubleshooting should begin by examining logs and recent deployment changes before implementing fixes."
+  },
+  {
+    "id": 227,
+    "question": "Which KPI would indicate that recent conversation design improvements have reduced customer effort?",
+    "options": [
+      "Increased average handling time.",
+      "Fewer clarification requests, higher containment rate, and improved CSAT.",
+      "Increased API response time.",
+      "Larger Knowledge Store size."
+    ],
+    "answer": 1,
+    "explanation": "Reduced customer effort is reflected in smoother conversations, better automation, and higher satisfaction.\n\n**228. A customer asks multiple questions in one message:\n\"What are your business hours, and can you also check my latest invoice?\"\nHow should the AI Agent respond?\nA. Answer only the first question.\nB. Answer only the second question.\nC. Answer the business hours using Knowledge AI, verify the customer's identity if required, then retrieve the invoice through the backend API.\nD. Transfer immediately to a live agent.\nAnswer: ✅ C\nExplanation: Enterprise AI Agents should handle mixed informational and transactional requests appropriately, using both Knowledge AI and APIs where necessary."
+  },
+  {
+    "id": 228,
+    "question": "Why should developers periodically review conversation transcripts even when Analytics KPIs appear healthy?",
+    "options": [
+      "Analytics replaces transcript reviews.",
+      "Transcripts reveal qualitative issues, customer frustrations, and edge cases that KPIs alone may not identify.",
+      "Transcript reviews reduce API latency.",
+      "Transcript reviews improve internet connectivity."
+    ],
+    "answer": 1,
+    "explanation": "Quantitative metrics show trends, while transcripts provide qualitative insights into customer experience and AI behavior."
+  },
+  {
+    "id": 229,
+    "question": "Which statement BEST represents a mature enterprise AI operating model?",
+    "options": [
+      "Build once and never modify the AI Agent.",
+      "Continuously monitor analytics, update knowledge, improve prompts, maintain integrations, review customer feedback, and retrain business teams.",
+      "Depend entirely on the LLM's built-in knowledge.",
+      "Focus only on increasing automation regardless of customer satisfaction."
+    ],
+    "answer": 1,
+    "explanation": "Successful enterprise AI programs require continuous optimization across technology, knowledge, governance, operations, and people."
+  },
+  {
+    "id": 230,
+    "question": "A customer requests to close their account permanently. What should the AI Agent do BEFORE initiating the account closure?",
+    "options": [
+      "Close the account immediately.",
+      "Verify the customer's identity, explain the consequences of account closure, obtain explicit confirmation, and then trigger the backend process.",
+      "Delete the customer's information without confirmation.",
+      "Transfer the customer to another chatbot."
+    ],
+    "answer": 1,
+    "explanation": "Account closure is a high-impact action. Enterprise AI Agents should verify identity, explain the implications, obtain explicit confirmation, and only then invoke the backend process."
+  },
+  {
+    "id": 231,
+    "question": "A customer asks, \"Can you recommend the best plan for me?\" What is the BEST AI Agent approach?",
+    "options": [
+      "Recommend the most expensive plan.",
+      "Ask questions to understand the customer's needs before making a recommendation.",
+      "Randomly choose a plan.",
+      "Tell the customer to visit the website."
+    ],
+    "answer": 1,
+    "explanation": "AI Agents should gather relevant information before making personalized recommendations."
+  },
+  {
+    "id": 232,
+    "question": "Which scenario best demonstrates contextual memory during a conversation?",
+    "options": [
+      "Asking for the customer's order number after it has already been provided.",
+      "Remembering the customer's order number throughout the conversation without asking again.",
+      "Restarting the conversation after every API call.",
+      "Ignoring previous customer responses."
+    ],
+    "answer": 1,
+    "explanation": "Context allows AI Agents to remember information collected during the current session, creating smoother conversations."
+  },
+  {
+    "id": 233,
+    "question": "During an API integration test, developers receive HTTP 404 Not Found. What is the MOST likely cause?",
+    "options": [
+      "Invalid endpoint URL or unavailable API resource.",
+      "Customer authentication failure.",
+      "Knowledge Store configuration issue.",
+      "Voice Gateway configuration issue."
+    ],
+    "answer": 0,
+    "explanation": "A 404 error usually indicates that the requested endpoint or resource cannot be found."
+  },
+  {
+    "id": 234,
+    "question": "Which design principle helps reduce unnecessary customer effort?",
+    "options": [
+      "Ask customers to repeat the same information throughout the conversation.",
+      "Minimize repetitive questions by reusing validated information.",
+      "Restart authentication after every interaction.",
+      "Require customers to provide all information again after each API call."
+    ],
+    "answer": 1,
+    "explanation": "Efficient use of previously collected information creates a more natural and satisfying customer experience."
+  },
+  {
+    "id": 235,
+    "question": "A customer asks a question that falls outside the organization's business scope. What should the AI Agent do?",
+    "options": [
+      "Create an answer using general internet knowledge.",
+      "Politely explain that it cannot assist with that request and redirect the customer to appropriate support if available.",
+      "Guess an answer.",
+      "End the conversation immediately."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI Agents should remain within their defined business domain and avoid providing unsupported information."
+  },
+  {
+    "id": 236,
+    "question": "Which monitoring practice best supports long-term AI quality?",
+    "options": [
+      "Review Analytics only once after deployment.",
+      "Continuously review Analytics, conversation transcripts, customer feedback, and system logs.",
+      "Disable logging to improve performance.",
+      "Monitor only API response times."
+    ],
+    "answer": 1,
+    "explanation": "Continuous monitoring enables organizations to detect issues early and improve AI performance over time."
+  },
+  {
+    "id": 237,
+    "question": "Which customer interaction is MOST appropriate for full AI automation?",
+    "options": [
+      "Updating internal company financial policies.",
+      "Checking order status after customer authentication.",
+      "Handling legal disputes.",
+      "Approving insurance claims."
+    ],
+    "answer": 1,
+    "explanation": "Routine, rule-based customer requests with defined business processes are ideal candidates for AI automation."
+  },
+  {
+    "id": 238,
+    "question": "Which factor contributes MOST to customer trust in an enterprise AI Agent?",
+    "options": [
+      "Responding as quickly as possible regardless of accuracy.",
+      "Providing accurate information, protecting customer data, and being transparent about limitations.",
+      "Answering every question without verification.",
+      "Avoiding clarification questions."
+    ],
+    "answer": 1,
+    "explanation": "Trust is built through accuracy, security, transparency, and compliance with business policies."
+  },
+  {
+    "id": 239,
+    "question": "Which statement BEST reflects the responsibilities of an enterprise AI developer?",
+    "options": [
+      "Focus only on writing prompts.",
+      "Design secure conversation flows, integrate enterprise systems, ensure governance, monitor performance, and continuously improve the AI solution.",
+      "Only maintain the Knowledge Store.",
+      "Only monitor Analytics dashboards."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI developers are responsible for the complete AI lifecycle, including conversation design, integrations, governance, testing, deployment, monitoring, and optimization."
+  },
+  {
+    "id": 240,
+    "question": "A customer asks, \"Can you change both my mailing address and phone number?\" What is the BEST AI Agent workflow?",
+    "options": [
+      "Update both details immediately.",
+      "Verify the customer's identity, collect the new information, summarize the requested changes, ask for confirmation, then call the appropriate backend API(s).",
+      "Update only the phone number.",
+      "Transfer the customer to a live agent."
+    ],
+    "answer": 1,
+    "explanation": "For sensitive account updates, the AI Agent should verify the customer's identity, validate the new information, confirm the requested changes, and only then perform the updates via secure APIs."
+  },
+  {
+    "id": 241,
+    "question": "Which of the following is an example of a dynamic customer inquiry?",
+    "options": [
+      "\"What are your business hours?\"",
+      "\"What is your return policy?\"",
+      "\"How many reward points do I currently have?\"",
+      "\"Where is your headquarters located?\""
+    ],
+    "answer": 2,
+    "explanation": "Reward points are customer-specific and constantly changing, requiring retrieval from a backend system through an API."
+  },
+  {
+    "id": 242,
+    "question": "During production monitoring, CSAT drops while API success rates remain normal. What should the team investigate FIRST?",
+    "options": [
+      "Internet speed.",
+      "Conversation design, prompts, Knowledge AI quality, and conversation transcripts.",
+      "Database storage capacity.",
+      "Voice Gateway licensing."
+    ],
+    "answer": 1,
+    "explanation": "Since the APIs are functioning correctly, the issue likely lies in the conversational experience, AI responses, or knowledge quality rather than system integrations."
+  },
+  {
+    "id": 243,
+    "question": "Which situation demonstrates the BEST use of the Profile object?",
+    "options": [
+      "Storing a customer's authentication code for one conversation.",
+      "Saving the customer's preferred communication language for future conversations.",
+      "Saving temporary API responses.",
+      "Storing the current conversation transcript."
+    ],
+    "answer": 1,
+    "explanation": "The Profile object stores long-term customer preferences and information that should persist across multiple conversations."
+  },
+  {
+    "id": 244,
+    "question": "Which situation demonstrates the BEST use of the Context object?",
+    "options": [
+      "Saving a customer's preferred language permanently.",
+      "Remembering the order number only during the current conversation.",
+      "Storing company FAQs.",
+      "Saving analytics reports."
+    ],
+    "answer": 1,
+    "explanation": "The Context object stores temporary session information that is needed only during the active conversation."
+  },
+  {
+    "id": 245,
+    "question": "Why should enterprise AI Agents separate business logic from presentation logic?",
+    "options": [
+      "To improve speech quality.",
+      "To make conversation design easier to maintain while allowing backend processes to evolve independently.",
+      "To eliminate APIs.",
+      "To increase token limits."
+    ],
+    "answer": 1,
+    "explanation": "Separating business logic from presentation improves maintainability, scalability, and simplifies future enhancements."
+  },
+  {
+    "id": 246,
+    "question": "A customer interrupts the AI Voice Agent while it is speaking. What should the Voice Agent ideally do?",
+    "options": [
+      "Ignore the interruption and continue speaking.",
+      "Detect the interruption, stop speaking, and process the customer's new request.",
+      "End the call.",
+      "Restart the conversation."
+    ],
+    "answer": 1,
+    "explanation": "Modern voice experiences support barge-in, allowing callers to interrupt naturally, improving usability and reducing frustration."
+  },
+  {
+    "id": 247,
+    "question": "Which practice best protects enterprise API credentials?",
+    "options": [
+      "Hardcode the API key directly into every Flow.",
+      "Store API credentials securely using environment variables or Cognigy Secrets.",
+      "Share API credentials among all developers in documentation.",
+      "Store API credentials in the Knowledge Store."
+    ],
+    "answer": 1,
+    "explanation": "Sensitive credentials should be managed securely using encrypted secret management rather than hardcoded values."
+  },
+  {
+    "id": 248,
+    "question": "Which deployment KPI would BEST demonstrate a successful Cognigy implementation?",
+    "options": [
+      "Largest Knowledge Store.",
+      "High containment rate, improved CSAT, reduced Average Handling Time (AHT), and stable API performance.",
+      "Longest conversation duration.",
+      "Highest token consumption."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise success is measured by customer satisfaction, operational efficiency, automation, and system reliability—not by technical metrics alone."
+  },
+  {
+    "id": 249,
+    "question": "Which statement BEST summarizes the role of a Cognigy Solution Architect?",
+    "options": [
+      "Write prompts only.",
+      "Design scalable AI solutions by combining conversation design, integrations, security, governance, analytics, and business processes to meet enterprise objectives.",
+      "Maintain only the Knowledge Store.",
+      "Monitor only Analytics dashboards."
+    ],
+    "answer": 1,
+    "explanation": "A Cognigy Solution Architect is responsible for designing end-to-end enterprise conversational AI solutions that integrate technology, business processes, governance, and customer experience."
+  },
+  {
+    "id": 250,
+    "question": "A customer asks, \"Why was my payment declined?\" Which is the BEST AI Agent response?",
+    "options": [
+      "Tell the customer the payment failed without further action.",
+      "Verify the customer's identity, retrieve the payment status from the backend system, explain the available information, and recommend the next steps if needed.",
+      "Ask the customer to try another payment method without checking.",
+      "Guess the reason based on previous transactions."
+    ],
+    "answer": 1,
+    "explanation": "Payment status is customer-specific information that requires backend verification. The AI Agent should never speculate about payment failures."
+  },
+  {
+    "id": 251,
+    "question": "Which type of information should normally be retrieved from a Knowledge Store?",
+    "options": [
+      "Customer account balance",
+      "Current order status",
+      "Company refund policy",
+      "Customer reward points"
+    ],
+    "answer": 1,
+    "explanation": "Company policies are static information suitable for Knowledge AI, while customer-specific data requires backend APIs."
+  },
+  {
+    "id": 252,
+    "question": "A customer changes their preferred language during a conversation. What should the AI Agent do?",
+    "options": [
+      "Ignore the request.",
+      "Update the preference for the current session and, if appropriate, save it to the customer's Profile for future conversations.",
+      "End the conversation.",
+      "Ask the customer to restart the chat."
+    ],
+    "answer": 1,
+    "explanation": "Session changes should apply immediately, and long-term preferences can be stored in the Profile object."
+  },
+  {
+    "id": 253,
+    "question": "Why should APIs return standardized response formats?",
+    "options": [
+      "To increase internet speed.",
+      "To simplify integration, error handling, and future maintenance.",
+      "To reduce Knowledge Store size.",
+      "To improve Speech-to-Text."
+    ],
+    "answer": 1,
+    "explanation": "Standardized API responses make integrations easier to develop, test, and maintain."
+  },
+  {
+    "id": 254,
+    "question": "During testing, the AI Agent correctly identifies the customer's intent but performs the wrong business action. Which component should developers investigate FIRST?",
+    "options": [
+      "NLU Intent Recognition",
+      "Flow routing and business logic",
+      "Speech-to-Text",
+      "Knowledge Store indexing"
+    ],
+    "answer": 1,
+    "explanation": "Since the intent was correctly identified, the issue most likely lies in the Flow logic or API mapping."
+  },
+  {
+    "id": 255,
+    "question": "Which practice helps reduce hallucinations when using Generative AI?",
+    "options": [
+      "Allow the LLM to answer every question freely.",
+      "Ground responses using enterprise Knowledge AI and clear prompt instructions.",
+      "Remove all system prompts.",
+      "Disable backend integrations."
+    ],
+    "answer": 1,
+    "explanation": "Grounding responses with trusted enterprise knowledge significantly reduces hallucinations and improves consistency."
+  },
+  {
+    "id": 256,
+    "question": "Which deployment activity should occur immediately after a major production release?",
+    "options": [
+      "Delete previous versions.",
+      "Closely monitor Analytics, logs, API performance, and customer feedback.",
+      "Disable monitoring.",
+      "Archive the project."
+    ],
+    "answer": 1,
+    "explanation": "Early monitoring allows teams to detect issues quickly and respond before they affect many customers."
+  },
+  {
+    "id": 257,
+    "question": "Which customer interaction would MOST benefit from an AI Agent?",
+    "options": [
+      "Processing thousands of repetitive order status requests every day.",
+      "Conducting employee disciplinary hearings.",
+      "Approving complex legal contracts.",
+      "Making executive business decisions."
+    ],
+    "answer": 0,
+    "explanation": "AI Agents excel at handling repetitive, structured, high-volume customer interactions."
+  },
+  {
+    "id": 258,
+    "question": "Which practice best demonstrates secure conversational AI development?",
+    "options": [
+      "Display all API responses to customers.",
+      "Verify customer identity, mask sensitive data, use secure authentication, and log activities appropriately.",
+      "Store passwords in the Context object.",
+      "Hardcode API credentials inside Flows."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI solutions must protect sensitive information through authentication, authorization, secure credential management, and proper auditing."
+  },
+  {
+    "id": 259,
+    "question": "Which statement BEST describes the role of Cognigy in an enterprise AI ecosystem?",
+    "options": [
+      "It functions only as a chatbot platform.",
+      "It orchestrates conversations by integrating LLMs, enterprise systems, APIs, Knowledge AI, analytics, and voice capabilities into a unified customer experience.",
+      "It replaces CRM systems.",
+      "It only provides Speech-to-Text services."
+    ],
+    "answer": 1,
+    "explanation": "Cognigy is an enterprise conversational AI orchestration platform that combines multiple technologies—including LLMs, Knowledge AI, APIs, Flows, Analytics, and Voice—to automate customer journeys securely and efficiently."
+  },
+  {
+    "id": 260,
+    "question": "A customer asks, \"Can you tell me why my order was delayed?\" What should the AI Agent do?",
+    "options": [
+      "Guess the reason based on common delivery issues.",
+      "Retrieve the latest shipment information from the backend logistics system and explain the available status.",
+      "Always blame the courier.",
+      "Escalate immediately without checking."
+    ],
+    "answer": 1,
+    "explanation": "Order status is dynamic customer information. The AI Agent should retrieve the latest data from the logistics or order management system before responding."
+  },
+  {
+    "id": 261,
+    "question": "Which enterprise design principle helps ensure that AI Agents remain easy to scale?",
+    "options": [
+      "Place every conversation into a single Flow.",
+      "Build modular Flows with reusable components and standardized integrations.",
+      "Duplicate logic across every project.",
+      "Store all business rules inside prompts."
+    ],
+    "answer": 1,
+    "explanation": "Modular architecture improves scalability, maintainability, and consistency across multiple AI applications."
+  },
+  {
+    "id": 262,
+    "question": "A customer asks, \"Can you email me a copy of my latest invoice?\" Which sequence is MOST appropriate?",
+    "options": [
+      "Send the invoice immediately.",
+      "Verify identity → Retrieve invoice → Confirm email address → Send via backend service.",
+      "Ask the customer to visit the website.",
+      "Transfer directly to a human agent."
+    ],
+    "answer": 1,
+    "explanation": "Sensitive documents should only be sent after identity verification and confirmation of the recipient's email address."
+  },
+  {
+    "id": 263,
+    "question": "Which Cognigy component is primarily responsible for orchestrating the conversation logic?",
+    "options": [
+      "Knowledge Store",
+      "Flow",
+      "Voice Gateway",
+      "Analytics Dashboard"
+    ],
+    "answer": 1,
+    "explanation": "Flows define the conversational path, business rules, API calls, and decision-making logic within Cognigy."
+  },
+  {
+    "id": 264,
+    "question": "During deployment testing, API authentication suddenly fails after rotating security credentials. What should developers verify FIRST?",
+    "options": [
+      "Analytics Dashboard.",
+      "Whether the updated credentials or secrets have been correctly configured in Cognigy.",
+      "Conversation transcripts.",
+      "Knowledge Store chunk size."
+    ],
+    "answer": 1,
+    "explanation": "Authentication failures after credential rotation are commonly caused by outdated or incorrectly configured secrets."
+  },
+  {
+    "id": 265,
+    "question": "Which metric BEST indicates that customers are finding answers without requiring human assistance?",
+    "options": [
+      "Increased Average Handling Time (AHT)",
+      "High Containment Rate",
+      "Increased Escalation Rate",
+      "Higher API latency"
+    ],
+    "answer": 1,
+    "explanation": "A high containment rate indicates that customers successfully complete their interactions with the AI Agent without needing escalation."
+  },
+  {
+    "id": 266,
+    "question": "Which customer request is LEAST suitable for Generative AI without enterprise grounding?",
+    "options": [
+      "Company opening hours.",
+      "Product return policy.",
+      "Financial advice specific to an individual customer's investment portfolio.",
+      "Shipping information."
+    ],
+    "answer": 2,
+    "explanation": "Personalized financial advice is high-risk and should not rely solely on generative AI. It requires verified data, governance, and often human oversight."
+  },
+  {
+    "id": 267,
+    "question": "Why is conversation logging important in enterprise deployments?",
+    "options": [
+      "It slows system performance.",
+      "It supports troubleshooting, auditing, compliance, and continuous improvement.",
+      "It replaces Analytics.",
+      "It increases token usage."
+    ],
+    "answer": 1,
+    "explanation": "Logs provide detailed records of conversations that help identify issues, support compliance, and improve AI performance."
+  },
+  {
+    "id": 268,
+    "question": "A company introduces a new product. Which action should be performed FIRST to ensure the AI Agent can answer related customer questions?",
+    "options": [
+      "Increase the LLM temperature.",
+      "Update the Knowledge Store with approved product documentation.",
+      "Restart the Voice Gateway.",
+      "Delete previous conversation logs."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise Knowledge AI should always be updated with validated business content before customers begin asking about new products."
+  },
+  {
+    "id": 269,
+    "question": "Which statement BEST describes a successful enterprise conversational AI strategy?",
+    "options": [
+      "Focus only on deploying the chatbot as quickly as possible.",
+      "Continuously improve conversation design, enterprise knowledge, integrations, analytics, governance, and customer experience based on real-world feedback.",
+      "Depend entirely on the LLM's built-in knowledge.",
+      "Eliminate all human involvement regardless of business risk."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise conversational AI is an ongoing program of continuous improvement involving technology, people, governance, and business processes—not a one-time deployment."
+  },
+  {
+    "id": 270,
+    "question": "A customer says, \"I forgot my username but I remember my email address.\" What should the AI Agent do?",
+    "options": [
+      "Generate a new username automatically.",
+      "Verify the customer's identity and retrieve the username securely using the registered email address through a backend system.",
+      "Ask the customer to create a new account.",
+      "Guess the username based on the email."
+    ],
+    "answer": 1,
+    "explanation": "Usernames are sensitive customer information and should only be retrieved after identity verification using secure backend integrations."
+  },
+  {
+    "id": 271,
+    "question": "Which enterprise practice helps ensure consistent responses across multiple AI Agents?",
+    "options": [
+      "Each AI Agent should have its own independent business rules.",
+      "Use centralized Knowledge Stores, reusable Flows, and standardized prompts.",
+      "Let each developer write their own response style.",
+      "Disable version control."
+    ],
+    "answer": 1,
+    "explanation": "Centralized knowledge and reusable components ensure consistency, easier maintenance, and governance across multiple AI solutions."
+  },
+  {
+    "id": 272,
+    "question": "A backend API returns HTTP 429 (Too Many Requests). What should the AI Agent do?",
+    "options": [
+      "Keep sending requests continuously.",
+      "Inform the customer that the service is temporarily busy, implement retry logic with backoff, or request the customer to try again shortly.",
+      "Display the HTTP error code.",
+      "Restart the entire conversation."
+    ],
+    "answer": 1,
+    "explanation": "HTTP 429 indicates rate limiting. Enterprise applications should use retry strategies with exponential backoff instead of repeatedly sending requests."
+  },
+  {
+    "id": 273,
+    "question": "Which deployment approach minimizes risk when releasing a major AI Agent update?",
+    "options": [
+      "Deploy directly to all customers immediately.",
+      "Use phased deployment or a pilot rollout before full production release.",
+      "Disable monitoring during deployment.",
+      "Skip User Acceptance Testing (UAT)."
+    ],
+    "answer": 1,
+    "explanation": "Gradual rollouts reduce business risk by allowing teams to identify issues before affecting the entire customer base."
+  },
+  {
+    "id": 274,
+    "question": "Which metric would BEST indicate that customers understand the AI Agent's responses?",
+    "options": [
+      "Higher token consumption.",
+      "Lower clarification rate and improved CSAT.",
+      "Larger Knowledge Store.",
+      "Increased API response time."
+    ],
+    "answer": 1,
+    "explanation": "If customers rarely ask for clarification and satisfaction scores improve, the AI Agent is communicating effectively."
+  },
+  {
+    "id": 275,
+    "question": "A customer asks a question that requires information unavailable in both the Knowledge Store and backend systems. What should the AI Agent do?",
+    "options": [
+      "Generate a confident answer using the LLM.",
+      "Clearly explain that the information is unavailable, avoid speculation, and escalate if appropriate.",
+      "Create new business information.",
+      "Search the public internet automatically."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI should never invent business information. Transparency maintains customer trust."
+  },
+  {
+    "id": 276,
+    "question": "Which practice BEST supports disaster recovery for enterprise conversational AI?",
+    "options": [
+      "Keep only one production environment.",
+      "Maintain backups of Flows, Knowledge Stores, configurations, and deployment versions.",
+      "Delete previous deployments after every release.",
+      "Disable version control."
+    ],
+    "answer": 1,
+    "explanation": "Proper backup and version management allow organizations to recover quickly from failures or faulty deployments."
+  },
+  {
+    "id": 277,
+    "question": "Which responsibility belongs primarily to business stakeholders rather than AI developers?",
+    "options": [
+      "Designing API integrations.",
+      "Defining business policies, approval rules, and customer service procedures.",
+      "Configuring HTTP Request Nodes.",
+      "Writing Flow logic."
+    ],
+    "answer": 1,
+    "explanation": "Business stakeholders define organizational policies, while developers implement them within the AI solution."
+  },
+  {
+    "id": 278,
+    "question": "During production monitoring, containment remains high but customer complaints increase. What should the team investigate?",
+    "options": [
+      "Only API response times.",
+      "Conversation quality, response accuracy, customer sentiment, and transcript reviews.",
+      "Increase LLM temperature.",
+      "Remove Knowledge AI."
+    ],
+    "answer": 1,
+    "explanation": "High containment does not necessarily mean customers are satisfied. Qualitative analysis helps identify poor experiences that KPIs alone may miss."
+  },
+  {
+    "id": 279,
+    "question": "Which statement BEST describes the purpose of enterprise AI governance?",
+    "options": [
+      "Increase token consumption.",
+      "Ensure AI systems remain secure, compliant, accurate, transparent, and aligned with organizational policies.",
+      "Replace software testing.",
+      "Eliminate human oversight."
+    ],
+    "answer": 1,
+    "explanation": "AI governance provides the framework for responsible AI by managing security, compliance, risk, ethics, and continuous oversight."
+  },
+  {
+    "id": 280,
+    "question": "Which authentication method is MOST appropriate when integrating Cognigy with enterprise REST APIs?",
+    "options": [
+      "Basic Authentication with hardcoded credentials",
+      "OAuth 2.0 or secure token-based authentication",
+      "Anonymous access",
+      "API credentials stored in Flow variables"
+    ],
+    "answer": 1,
+    "explanation": "OAuth 2.0 and token-based authentication provide secure, scalable, and enterprise-grade access control for backend integrations."
+  },
+  {
+    "id": 281,
+    "question": "During a conversation, the AI Agent cannot reach the CRM system. What is the BEST customer experience?",
+    "options": [
+      "Display the technical error message returned by the CRM.",
+      "Inform the customer that the service is temporarily unavailable, apologize, and offer an alternative such as retrying later or speaking to an agent.",
+      "End the conversation immediately.",
+      "Invent customer account information."
+    ],
+    "answer": 1,
+    "explanation": "Customers should receive a clear, user-friendly explanation without exposing internal system errors."
+  },
+  {
+    "id": 282,
+    "question": "Which KPI BEST measures how effectively an AI Agent resolves customer requests without human intervention?",
+    "options": [
+      "Average Token Usage",
+      "Containment Rate",
+      "Number of Knowledge Articles",
+      "API Response Size"
+    ],
+    "answer": 1,
+    "explanation": "Containment Rate measures the percentage of conversations successfully completed without escalation to a live agent."
+  },
+  {
+    "id": 283,
+    "question": "Which practice BEST improves the reliability of enterprise AI integrations?",
+    "options": [
+      "Ignore failed API responses.",
+      "Implement retries, timeout handling, error logging, and fallback mechanisms.",
+      "Retry every failed request infinitely.",
+      "Remove exception handling."
+    ],
+    "answer": 1,
+    "explanation": "Robust error handling and fallback strategies make enterprise integrations more resilient and reliable."
+  },
+  {
+    "id": 284,
+    "question": "Why should developers separate environment-specific configurations (Development, UAT, Production)?",
+    "options": [
+      "To increase token usage.",
+      "To prevent accidental changes, improve security, and simplify deployments.",
+      "To make Flows larger.",
+      "To reduce Knowledge Store size."
+    ],
+    "answer": 1,
+    "explanation": "Using separate environments minimizes deployment risks and ensures controlled software promotion."
+  },
+  {
+    "id": 285,
+    "question": "Which scenario BEST demonstrates effective fallback handling?",
+    "options": [
+      "The AI Agent ends the conversation after failing to recognize an intent.",
+      "The AI Agent asks a clarifying question or offers to transfer the customer after multiple unsuccessful attempts.",
+      "The AI Agent repeatedly asks the same question.",
+      "The AI Agent generates a random response."
+    ],
+    "answer": 1,
+    "explanation": "Effective fallback handling improves customer experience by recovering gracefully when the AI cannot confidently proceed."
+  },
+  {
+    "id": 286,
+    "question": "Which enterprise security principle should ALWAYS apply when logging conversations?",
+    "options": [
+      "Log every customer password for troubleshooting.",
+      "Mask or exclude sensitive information such as passwords, payment details, and personal identifiers.",
+      "Publish logs publicly.",
+      "Disable all logging."
+    ],
+    "answer": 1,
+    "explanation": "Sensitive customer information should never be stored in logs. Data masking supports privacy and regulatory compliance."
+  },
+  {
+    "id": 287,
+    "question": "A business introduces a new customer verification policy. What should be updated FIRST?",
+    "options": [
+      "Voice Gateway only.",
+      "Conversation Flows and backend verification logic to reflect the new business process.",
+      "Analytics Dashboard.",
+      "Customer transcripts."
+    ],
+    "answer": 1,
+    "explanation": "Business policy changes must be implemented within the AI conversation logic and supporting backend processes."
+  },
+  {
+    "id": 288,
+    "question": "Which activity contributes MOST to continuous improvement after deployment?",
+    "options": [
+      "Never reviewing conversations.",
+      "Regularly analyzing Analytics, conversation transcripts, customer feedback, and updating Knowledge AI accordingly.",
+      "Increasing LLM temperature.",
+      "Restarting production weekly."
+    ],
+    "answer": 1,
+    "explanation": "Continuous improvement relies on operational insights and customer feedback to refine AI performance over time."
+  },
+  {
+    "id": 289,
+    "question": "Which statement BEST describes an enterprise-ready Cognigy AI solution?",
+    "options": [
+      "It answers every question using only the LLM's general knowledge.",
+      "It securely combines conversation design, enterprise knowledge, backend integrations, monitoring, governance, and continuous optimization.",
+      "It operates without business approval.",
+      "It eliminates the need for backend systems."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI solutions are built on secure integrations, governed knowledge, robust monitoring, and continuous optimization rather than relying solely on an LLM."
+  },
+  {
+    "id": 290,
+    "question": "A customer asks, \"Can you cancel my order?\" What is the MOST appropriate AI Agent workflow?",
+    "options": [
+      "Cancel the order immediately.",
+      "Verify the customer's identity, retrieve the order details, verify that cancellation is allowed, obtain customer confirmation, then invoke the cancellation API.",
+      "Tell the customer cancellations are not allowed.",
+      "Transfer every cancellation request to a human agent."
+    ],
+    "answer": 1,
+    "explanation": "Order cancellation is a transactional process involving identity verification, business rule validation, explicit confirmation, and secure backend integration."
+  },
+  {
+    "id": 291,
+    "question": "Which Cognigy component is responsible for connecting the AI Agent to external enterprise systems?",
+    "options": [
+      "Knowledge Store",
+      "HTTP Request Node",
+      "Analytics Dashboard",
+      "Voice Gateway"
+    ],
+    "answer": 1,
+    "explanation": "The HTTP Request Node enables Flows to communicate with external REST APIs such as CRM, ERP, payment, and order management systems."
+  },
+  {
+    "id": 292,
+    "question": "During production monitoring, the AI Agent frequently falls back because it cannot recognize customer requests. What should be investigated FIRST?",
+    "options": [
+      "API response times.",
+      "Intent training, example utterances, and NLU configuration.",
+      "Voice Gateway licenses.",
+      "Analytics storage."
+    ],
+    "answer": 1,
+    "explanation": "Frequent fallback often indicates that intents are poorly trained or that utterances do not adequately represent customer language."
+  },
+  {
+    "id": 293,
+    "question": "Which practice BEST supports maintainability when multiple developers work on the same Cognigy project?",
+    "options": [
+      "One large Flow containing all logic.",
+      "Modular Flows, reusable components, documentation, and version control.",
+      "Hardcoded configuration values.",
+      "Individual coding styles without standards."
+    ],
+    "answer": 1,
+    "explanation": "Modular architecture and version control improve collaboration and simplify maintenance."
+  },
+  {
+    "id": 294,
+    "question": "Why should customer authentication occur before retrieving personal account information?",
+    "options": [
+      "To improve API speed.",
+      "To protect customer privacy and comply with security policies.",
+      "To reduce token usage.",
+      "To improve speech recognition."
+    ],
+    "answer": 1,
+    "explanation": "Authentication ensures that confidential information is only accessible to authorized users."
+  },
+  {
+    "id": 295,
+    "question": "Which enterprise KPI BEST demonstrates operational efficiency after AI implementation?",
+    "options": [
+      "Increased conversation length.",
+      "Reduced Average Handling Time (AHT) while maintaining or improving CSAT.",
+      "Increased API response time.",
+      "Larger Knowledge Store."
+    ],
+    "answer": 1,
+    "explanation": "Lower AHT combined with strong customer satisfaction indicates efficient automation without sacrificing service quality."
+  },
+  {
+    "id": 296,
+    "question": "Which action should developers take when deploying a major update to the Knowledge Store?",
+    "options": [
+      "Replace the content directly in production without testing.",
+      "Validate the updated knowledge in a testing environment before deploying to production.",
+      "Disable Analytics.",
+      "Delete previous Knowledge Store versions."
+    ],
+    "answer": 1,
+    "explanation": "Testing ensures that updated knowledge produces accurate and consistent responses before customers are affected."
+  },
+  {
+    "id": 297,
+    "question": "Which practice BEST supports compliance with data privacy regulations such as GDPR or PDPA?",
+    "options": [
+      "Store all customer conversations indefinitely.",
+      "Encrypt sensitive information, restrict access, and retain only necessary customer data.",
+      "Share customer information with all developers.",
+      "Save passwords inside conversation logs."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI solutions should follow data minimization, secure storage, encryption, and controlled access principles to comply with privacy regulations."
+  },
+  {
+    "id": 298,
+    "question": "What is the PRIMARY objective of monitoring Cognigy Analytics after deployment?",
+    "options": [
+      "Count the number of Flow Nodes.",
+      "Measure AI performance, identify improvement opportunities, monitor customer experience, and detect operational issues.",
+      "Increase token usage.",
+      "Reduce internet bandwidth."
+    ],
+    "answer": 1,
+    "explanation": "Analytics provides actionable insights into customer interactions, AI performance, containment, escalations, and business outcomes."
+  },
+  {
+    "id": 299,
+    "question": "Which statement BEST summarizes enterprise conversational AI success?",
+    "options": [
+      "The AI Agent answers every possible question without limitations.",
+      "The AI Agent securely automates suitable business processes, integrates with enterprise systems, continuously improves through analytics, and enhances customer experience while maintaining governance and compliance.",
+      "The AI Agent completely replaces all employees.",
+      "The AI Agent operates independently without business oversight."
+    ],
+    "answer": 1,
+    "explanation": "Enterprise AI success is measured by business value, customer satisfaction, operational efficiency, security, governance, scalability, and continuous improvement—not simply by automation volume."
+  }
+]
