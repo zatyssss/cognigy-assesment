@@ -73,7 +73,7 @@ function renderStart(loadError){
         <label for="name-input">Your name</label>
         <input type="text" id="name-input" placeholder="e.g. Alex Rivera" maxlength="60">
       </div>
-      <button class="btn btn-primary" id="start-btn" ${ready ? '' : 'disabled'}>Start Assessment</button>
+      <button class="btn btn-primary" id="start-btn" ${ready ? '' : 'disabled'}>Start Cognigy Assessment</button>
       ${loadError ? `<p class="load-msg err">${esc(loadError)}</p>` : ''}
     </div>
   `;
