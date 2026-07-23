@@ -62,7 +62,7 @@ function renderStart(loadError){
   const ready = fullBank.length > 0;
   app.innerHTML = `
     <div class="start-card">
-      <h1>AI Agent Assessment</h1>
+      <h1>Cognigy Assessment</h1>
       <p class="desc">This assessment checks your understanding of building and deploying AI Agents. You'll receive ${QUESTIONS_PER_PARTICIPANT} randomly selected questions ${ready ? 'from a bank of ' + fullBank.length : ''} \u2014 your set will be different from everyone else's.</p>
       <div class="meta-row">
         <span class="meta-pill">${DURATION_MINUTES} min</span>
