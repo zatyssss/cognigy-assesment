@@ -1,4 +1,4 @@
-# AI Agent Assessment — Quiz Site
+# Cognigy Assessment — Quiz Site
 
 A static, self-contained quiz app. No backend, no build step.
 
