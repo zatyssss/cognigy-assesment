@@ -3,7 +3,7 @@
    =========================================================== */
 const QUESTIONS_PER_PARTICIPANT = 50;
 const DURATION_MINUTES = 60;
-const PASSING_PERCENT = 70;
+const PASSING_PERCENT = 80;
 
 /* ===========================================================
    STATE
